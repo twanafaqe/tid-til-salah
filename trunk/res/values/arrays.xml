@@ -1,0 +1,36 @@
+<resources>
+<string-array name="tidligNotifikation">
+        <item name="tilTiden">Til tiden</item>
+        <item name="fem">5 min</item>
+        <item name="ti">10 min</item>
+        <item name="femten">15 min</item>
+    </string-array>
+	<string-array name="min">
+        <item name="0">0</item>
+        <item name="5">5</item>
+        <item name="10">10</item>
+        <item name="15">15</item>
+    </string-array>
+    <string-array name="Location">
+        <item name="Aarhus">Aarhus</item>
+        <item name="København">København</item>
+        <item name="Vejle">Vejle</item>
+        
+    </string-array>
+    <string-array name="Notificationtone">
+        <item name="Ingen_Lyd">Lydløs</item>
+        <item name="default">Ding</item>
+        <item name="Mekka">Mekka</item>
+        <item name="Meshary">Meshary</item>
+    </string-array>
+    <string-array name="Notification_tone">
+        <item name="Ingen_Lyd">lydløs</item>
+        <item name="default">ding</item>
+        <item name="Mekka">mekka</item>
+        <item name="Meshary">meshary</item>
+    </string-array>
+       <string-array name="Tema">
+        <item name="Rød">Rød</item>
+    </string-array>
+	
+</resources>

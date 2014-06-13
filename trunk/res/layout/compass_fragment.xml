@@ -1,0 +1,20 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="#f26149" >
+    
+    <ImageView
+        android:id="@+id/imageViewKaaba"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/img_kaaba"/>
+
+    <ImageView
+        android:id="@+id/imageViewCompass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/img_compass"/>
+
+</LinearLayout>
