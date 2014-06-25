@@ -1,7 +1,5 @@
 package com.muslimapps.tidtilsalah;
 
-import com.muslimapps.tidtilsalah.R;
-import com.muslimapps.tidtilsalah.StartService.LocalBinder;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
@@ -16,6 +14,8 @@ import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.view.Menu;
 import android.view.View;
+
+import com.muslimapps.tidtilsalah.StartService.LocalBinder;
 
 public class MainActivity extends FragmentActivity  {
     private static final int NUM_PAGES = 3;

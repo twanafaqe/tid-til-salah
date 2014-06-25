@@ -4,9 +4,6 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.List;
 
-import com.muslimapps.tidtilsalah.R;
-import com.muslimapps.tidtilsalah.logic.SalahTider;
-
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -18,6 +15,8 @@ import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.Spinner;
 import android.widget.TextView;
+
+import com.muslimapps.tidtilsalah.logic.SalahTider;
 
 public class OtherDayFragment extends Fragment {
 	

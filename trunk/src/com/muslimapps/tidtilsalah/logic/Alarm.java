@@ -2,9 +2,6 @@ package com.muslimapps.tidtilsalah.logic;
 
 import java.util.Calendar;
 
-import com.muslimapps.tidtilsalah.MainActivity;
-import com.muslimapps.tidtilsalah.R;
-
 import android.app.AlarmManager;
 import android.app.Notification;
 import android.app.NotificationManager;
@@ -15,6 +12,9 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.net.Uri;
 import android.preference.PreferenceManager;
+
+import com.muslimapps.tidtilsalah.MainActivity;
+import com.muslimapps.tidtilsalah.R;
 
 public class Alarm extends BroadcastReceiver {
     @Override

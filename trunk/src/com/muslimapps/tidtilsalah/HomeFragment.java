@@ -4,12 +4,9 @@ package com.muslimapps.tidtilsalah;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
-import com.muslimapps.tidtilsalah.R;
-
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
-
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.preference.PreferenceManager;
@@ -17,11 +14,10 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
 import android.widget.ImageButton;
 import android.widget.TextView;
 
-import com.muslimapps.tidtilsalah.logic.*;
+import com.muslimapps.tidtilsalah.logic.SalahTider;
 
 public class HomeFragment extends Fragment {
 	

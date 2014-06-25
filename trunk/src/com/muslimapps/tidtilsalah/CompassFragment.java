@@ -1,12 +1,6 @@
 package com.muslimapps.tidtilsalah;
 
-import com.muslimapps.tidtilsalah.logic.SalahTider;
-
-import android.annotation.SuppressLint;
 import android.content.Context;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.graphics.Matrix;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
@@ -20,6 +14,8 @@ import android.view.animation.Animation;
 import android.view.animation.RotateAnimation;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.muslimapps.tidtilsalah.logic.SalahTider;
 
 public class CompassFragment extends Fragment implements SensorEventListener {
 

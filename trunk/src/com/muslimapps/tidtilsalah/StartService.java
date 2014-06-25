@@ -3,9 +3,6 @@ package com.muslimapps.tidtilsalah;
 
 import java.util.Calendar;
 
-
-import com.muslimapps.tidtilsalah.logic.SalahTider;
-
 import android.app.AlarmManager;
 import android.app.PendingIntent;
 import android.app.Service;
@@ -13,10 +10,10 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Binder;
 import android.os.IBinder;
-
 import android.preference.PreferenceManager;
 
-import com.muslimapps.tidtilsalah.logic.*;
+import com.muslimapps.tidtilsalah.logic.Alarm;
+import com.muslimapps.tidtilsalah.logic.SalahTider;
 
 public class StartService extends Service {
 

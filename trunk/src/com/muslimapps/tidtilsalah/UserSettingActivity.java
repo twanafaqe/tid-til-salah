@@ -2,10 +2,8 @@ package com.muslimapps.tidtilsalah;
 
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.OnSharedPreferenceChangeListener;
-
 import android.os.Bundle;
 import android.preference.PreferenceActivity;
-import android.widget.Toast;
 
 
 public class UserSettingActivity extends PreferenceActivity implements
