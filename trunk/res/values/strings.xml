@@ -7,7 +7,11 @@
     <string name="drawer_open">Slider Menu Opened</string>
     <string name="drawer_close">Slider Menu Closed</string>
     <string name="Version">Version</string>
-    
+    <string name="Facebook">Facebook</string>
+    <string name="Versionnumber">Version 1.0</string>
+    <string name="Gmail">Gmail</string>
+    <string name="emailAddress">tidtilsalah@gmail.com</string>
+    <string name="emailSubject">Tid til Salah</string>    
     
     <!-- Content Description -->
     <string name="desc_list_item_icon">Item Icon</string>
