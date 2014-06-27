@@ -59,7 +59,7 @@ public class OtherDayFragment extends Fragment {
 				cal.set(Calendar.DATE, datePicker.getDayOfMonth());
 				cal.set(Calendar.MONTH, datePicker.getMonth());
 				List<Calendar> list = SalahTider.getInstance().getSalahTiderForSpecificDay(
-									(String)locationSpinner.getSelectedItem(), cal.get(Calendar.DAY_OF_YEAR));
+									(String)locationSpinner.getSelectedItem(), cal.get((Calendar.DAY_OF_YEAR))-1);
 				
 		        SimpleDateFormat ft = 
 		        	      new SimpleDateFormat ("HH:mm");
