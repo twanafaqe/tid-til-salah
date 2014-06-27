@@ -15,6 +15,7 @@
         <item name="Aarhus">Aarhus</item>
         <item name="København">København</item>
         <item name="Vejle">Vejle</item>
+        <item name="Odense">Odense</item>
         
     </string-array>
     <string-array name="Notificationtone">

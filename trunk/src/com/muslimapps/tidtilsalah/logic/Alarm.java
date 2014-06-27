@@ -23,6 +23,7 @@ public class Alarm extends BroadcastReceiver {
     	String alarmType = salahTider.getNextSalah();
     	String nextSalah = null;
     	Calendar nextAlarmCalendar = null;
+    	String tidtil;
     	
 		SharedPreferences sharedPrefs = PreferenceManager
 				.getDefaultSharedPreferences(context);
@@ -38,7 +39,16 @@ public class Alarm extends BroadcastReceiver {
 		//Toast.makeText(context, R.raw.adhan,Toast.LENGTH_LONG).show();
 		
 		Notification.Builder mNotification = new Notification.Builder(context);
-		String tidtil = "Tid til " + alarmType;
+		String earlyNotification = sharedPrefs.getString("tidligNotifikation", "0");
+		int tidligNotification = Integer.parseInt(earlyNotification);
+		if(tidligNotification == 0)
+		{
+			tidtil = "Tid til " + alarmType;
+		}
+		else
+		{
+			tidtil = "Snart tid til " + alarmType;
+		}
 		mNotification.setSmallIcon(R.drawable.ic_stat_salah);
 		
 		

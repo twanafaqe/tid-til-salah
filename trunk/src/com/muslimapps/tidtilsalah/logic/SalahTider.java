@@ -127,7 +127,7 @@ public class SalahTider {
         {
         	case "Aarhus":
         	{
-        		return 135;
+        		return (float) (135.53);
         	}
         	case "Vejle":
         	{
@@ -135,7 +135,11 @@ public class SalahTider {
         	}
         	case "København":
         	{
-        		return 138;
+        		return (float) (138.24);
+        	}
+        	case "Odense":
+        	{
+        		return (float) (135.17);
         	}
         }
         return 0;
@@ -254,6 +258,17 @@ public class SalahTider {
 			}
 			case "Aalborg":
 			{
+				break;
+			}
+			
+			case "Odense":
+			{
+				fajrAdjust = -1;
+				shuruqAdjust = -1;
+				duhurAdjust = -1;
+				asrAdjust = -1;
+				maghribAdjust = -1;
+				ishaAdjust = -1;
 				break;
 			}
 			

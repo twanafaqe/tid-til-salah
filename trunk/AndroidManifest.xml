@@ -43,6 +43,12 @@
 		        </intent-filter>
 		</receiver>
 		<service android:enabled="true" android:name=".StartService" />
+		
+		<activity
+            android:name="com.muslimapps.tidtilsalah.InfoActivity">
+            
+        </activity>
+		
     </application>
 
 </manifest>

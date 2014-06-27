@@ -91,9 +91,11 @@
  	</PreferenceCategory>
  	
   	<PreferenceCategory android:title="@string/Om" >
-      	<Preference android:title="Om"
-                android:key="Button"/>
-      
+      	<Preference android:title="@string/Om"
+      	    android:summary="Versionsnummer"
+      	    android:key="OmButton"/>
+  
+ 		       
  	 </PreferenceCategory>
  	
 </PreferenceScreen>
