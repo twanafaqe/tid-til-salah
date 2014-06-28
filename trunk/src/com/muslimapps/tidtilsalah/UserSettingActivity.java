@@ -18,14 +18,14 @@ import android.widget.Toast;
 public class UserSettingActivity extends PreferenceActivity implements
 OnSharedPreferenceChangeListener {
 	OnSharedPreferenceChangeListener listener;
-	MediaPlayer playtone;
+	private MediaPlayer playtone;
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		
-		
-
 		addPreferencesFromResource(R.xml.settings);
+		
+		playtone = new MediaPlayer();
 		
 		Preference button = (Preference)findPreference("OmButton");
 		
@@ -62,30 +62,37 @@ OnSharedPreferenceChangeListener {
 	public void onSharedPreferenceChanged(SharedPreferences sharedPreferences,
 			String key) {
 		// TODO Auto-generated method stub
-		/*if(playtone.isPlaying())
+
+		if(playtone.isPlaying())
 		{
 			playtone.stop();
-			playtone.prepareAsync();
-			Toast.makeText(getApplicationContext(), "test", Toast.LENGTH_LONG).show();
-
-		}*/		
+		}	
 		
 		SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());   
 		//Toast.makeText(getApplicationContext(), key, Toast.LENGTH_LONG).show();
 		if(key.contentEquals("Notificationtone"))		
-		{
+		{			
 			String azaanVoice = sharedPrefs.getString("Notificationtone", "lysløs");
 			if(azaanVoice != null && azaanVoice != "lydløs")
 			{
 				Uri soundUri = Uri.parse("android.resource://"
 				          + getApplicationContext().getPackageName() + "/raw/" + azaanVoice);
-				playtone = MediaPlayer.create(getApplicationContext(), soundUri);
-//				try {
-//					playtone.prepare();
-//				} catch (IllegalStateException | IOException e) {
-//					// TODO Auto-generated catch block
-//					e.printStackTrace();
-//				}	
+				try {
+					playtone.setDataSource(getApplicationContext(), soundUri);
+				} catch (IllegalArgumentException | SecurityException
+						| IllegalStateException | IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				
+				playtone.prepareAsync();
+				try {
+					playtone.prepare();
+				} catch (IllegalStateException | IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}	
+				
 				playtone.start();
 			}
 		}		
