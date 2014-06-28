@@ -62,38 +62,51 @@ OnSharedPreferenceChangeListener {
 	public void onSharedPreferenceChanged(SharedPreferences sharedPreferences,
 			String key) {
 		// TODO Auto-generated method stub
-
-		if(playtone.isPlaying())
+		if(playtone != null)
 		{
+			if(playtone.isPlaying())
+			{
+				playtone.stop();
+				playtone.reset();
+			}	
 			playtone.stop();
-		}	
+			playtone.reset();
+		}
 		
 		SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());   
 		//Toast.makeText(getApplicationContext(), key, Toast.LENGTH_LONG).show();
 		if(key.contentEquals("Notificationtone"))		
 		{			
 			String azaanVoice = sharedPrefs.getString("Notificationtone", "lysløs");
-			if(azaanVoice != null && azaanVoice != "lydløs")
+			if(azaanVoice != null)
 			{
-				Uri soundUri = Uri.parse("android.resource://"
-				          + getApplicationContext().getPackageName() + "/raw/" + azaanVoice);
-				try {
-					playtone.setDataSource(getApplicationContext(), soundUri);
-				} catch (IllegalArgumentException | SecurityException
-						| IllegalStateException | IOException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
+				if(azaanVoice != "lydløs")
+				{
+					Uri soundUri = Uri.parse("android.resource://"
+					          + getApplicationContext().getPackageName() + "/raw/" + azaanVoice);
+					try {
+						playtone.setDataSource(this, soundUri);
+					} catch (IllegalArgumentException | SecurityException
+							| IllegalStateException | IOException e1) {
+						// TODO Auto-generated catch block
+						e1.printStackTrace();
+					}
+									
+	//				playtone.prepareAsync();
+					try {
+						playtone.prepare();
+					} catch (IllegalStateException e) {
+						// TODO Auto-generated catch block
+						Toast.makeText(this, "h", Toast.LENGTH_LONG).show();
+						e.printStackTrace();
+					} catch (IOException e) {
+						// TODO Auto-generated catch block
+						Toast.makeText(this, "f", Toast.LENGTH_LONG).show();
+	
+						e.printStackTrace();
+					}				
+					playtone.start();
 				}
-				
-				playtone.prepareAsync();
-				try {
-					playtone.prepare();
-				} catch (IllegalStateException | IOException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}	
-				
-				playtone.start();
 			}
 		}		
 	}
