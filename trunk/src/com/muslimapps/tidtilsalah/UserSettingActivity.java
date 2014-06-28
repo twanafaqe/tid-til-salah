@@ -42,6 +42,7 @@ OnSharedPreferenceChangeListener {
 		
 	}
 	
+	
 	@Override
 	protected void onResume() {
 	    super.onResume();
@@ -56,8 +57,38 @@ OnSharedPreferenceChangeListener {
         // It's best practice to unregister listeners when your app isn't using them to cut down on
         // unnecessary system overhead. You do this in onPause().
         getPreferenceScreen().getSharedPreferences().registerOnSharedPreferenceChangeListener(this);
+        
+        if(playtone != null)
+		{        	
+			if(playtone.isPlaying())
+			{
+				playtone.stop();
+				playtone.reset();
+			}
+			playtone.stop();
+			playtone.reset();			
+		}
     }
-	 
+	
+	protected void onDestroy() {
+
+	    getPreferenceManager().getSharedPreferences()
+	            .unregisterOnSharedPreferenceChangeListener(this);
+	    super.onDestroy();
+
+	    if(playtone != null)
+		{        	
+			if(playtone.isPlaying())
+			{
+				playtone.stop();
+				playtone.reset();
+			}
+			playtone.stop();
+			playtone.reset();			
+		}
+	}
+	
+	
 	@Override
 	public void onSharedPreferenceChanged(SharedPreferences sharedPreferences,
 			String key) {
@@ -97,12 +128,9 @@ OnSharedPreferenceChangeListener {
 						playtone.prepare();
 					} catch (IllegalStateException e) {
 						// TODO Auto-generated catch block
-						Toast.makeText(this, "h", Toast.LENGTH_LONG).show();
 						e.printStackTrace();
 					} catch (IOException e) {
-						// TODO Auto-generated catch block
-						Toast.makeText(this, "f", Toast.LENGTH_LONG).show();
-	
+						// TODO Auto-generated catch block	
 						e.printStackTrace();
 					}				
 					playtone.start();
