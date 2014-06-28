@@ -24,7 +24,7 @@
         android:gravity="center"
         android:text="@string/Versionnumber"
         android:textColor="#FFFFFF"
-        android:textSize="20sp"
+        android:textSize="20dp"
         android:textStyle="bold" />
 
     <Button
@@ -34,7 +34,7 @@
         android:layout_marginBottom="5dp"
         android:text="@string/Facebook"
         android:textColor="#0101DF"
-        android:textSize="30sp"
+        android:textSize="30dp"
         android:textStyle="bold" />
     
     <Button
@@ -44,7 +44,7 @@
         android:layout_marginBottom="5dp"
         android:text="@string/Gmail"
         android:textColor="#0101DF"
-        android:textSize="30sp"
+        android:textSize="30dp"
         android:textStyle="bold" />
  
 </LinearLayout>
