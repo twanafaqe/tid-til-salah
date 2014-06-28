@@ -16,7 +16,7 @@
         <item name="København">København</item>
         <item name="Vejle">Vejle</item>
         <item name="Odense">Odense</item>
-        
+        <item name="Grenaa">Grenaa</item>
     </string-array>
     <string-array name="Notificationtone">
         <item name="Ingen_Lyd">Lydløs</item>

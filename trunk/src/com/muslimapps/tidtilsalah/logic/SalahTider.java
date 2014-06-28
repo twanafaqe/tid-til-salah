@@ -141,6 +141,11 @@ public class SalahTider {
         	{
         		return (float) (135.17);
         	}
+        	case "Grenaa":
+        	{
+        		return (float) (136.63);
+        	}
+        	
         }
         return 0;
     }
@@ -269,6 +274,17 @@ public class SalahTider {
 				asrAdjust = -1;
 				maghribAdjust = -1;
 				ishaAdjust = -1;
+				break;
+			}
+			
+			case "Grenaa":
+			{
+				fajrAdjust = 0;
+				shuruqAdjust = 0;
+				duhurAdjust = 0;
+				asrAdjust = 10;
+				maghribAdjust = 3;
+				ishaAdjust = 0;
 				break;
 			}
 			
