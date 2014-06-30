@@ -20,18 +20,30 @@
  		android:layout_alignParentRight="true"
 	    android:background="@null"/>
     
-<!--     <TextView
-        android:id="@+id/tapMenuSalahTider"
+     <TextView
+        android:id="@+id/tabText1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Salah tider"
-        android:layout_marginTop="13dp"
-        android:layout_marginLeft="10dp"
-        android:layout_centerHorizontal="true"
+        android:text="|"
+        android:layout_marginTop="9dp"
+        android:layout_marginLeft="12dp"
+        android:layout_alignParentLeft="true"
         android:textColor="#ffffff"
-        android:textSize="20sp"
+        android:textSize="23sp"
         android:fontFamily="sans-serif-condensed"/>
     
+     <TextView
+        android:id="@+id/tabText2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SALAH TIDER"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@+id/tabText1"
+        android:textColor="#ffffff"
+        android:textSize="15sp"
+        android:fontFamily="sans-serif-condensed"/>
+<!--    
     <TextView
         android:id="@+id/tapMenuAndreDage"
         android:layout_width="wrap_content"
@@ -60,6 +72,7 @@
     android:id="@+id/body"
     android:layout_width="match_parent"
     android:layout_height="fill_parent"
+    android:layout_marginTop="25dp"
     android:orientation="vertical"
     android:gravity="center">
     

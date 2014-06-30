@@ -4,6 +4,7 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.List;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -13,6 +14,7 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.DatePicker;
+import android.widget.ImageButton;
 import android.widget.Spinner;
 import android.widget.TextView;
 
@@ -34,6 +36,14 @@ public class OtherDayFragment extends Fragment {
             Bundle savedInstanceState) {
  
         View rootView = inflater.inflate(R.layout.other_day_fragment, container, false);
+        
+		ImageButton settingsButton = (ImageButton) rootView.findViewById(R.id.settingsButton);
+		settingsButton.setOnClickListener(new View.OnClickListener() {
+		    public void onClick(View v) {
+				Intent i = new Intent(getActivity(), UserSettingActivity.class);
+				startActivityForResult(i, 1);
+		    }
+		});
          
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(
         		  getActivity(), R.array.Location, android.R.layout.simple_spinner_item );

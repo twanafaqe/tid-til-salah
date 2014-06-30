@@ -1,6 +1,7 @@
 package com.muslimapps.tidtilsalah;
 
 import android.content.Context;
+import android.content.Intent;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
@@ -12,6 +13,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.view.animation.RotateAnimation;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -38,6 +40,15 @@ public class CompassFragment extends Fragment implements SensorEventListener {
         // Inflate the layout for this fragment
         rootView =  inflater.inflate(R.layout.compass_fragment, 
                                  container, false);
+        
+		ImageButton settingsButton = (ImageButton) rootView.findViewById(R.id.settingsButton);
+		settingsButton.setOnClickListener(new View.OnClickListener() {
+		    public void onClick(View v) {
+				Intent i = new Intent(getActivity(), UserSettingActivity.class);
+				startActivityForResult(i, 1);
+		    }
+		});
+        
         return rootView;
    }
 	
