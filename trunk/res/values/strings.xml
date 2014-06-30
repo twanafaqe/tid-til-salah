@@ -14,7 +14,7 @@
     <string name="emailSubject">Tid til Salah</string>
     <string name="otherdayfragment">TIDER FOR ANDRE DAGE</string>
     <string name="compassfragment">QIBLA</string>
-    <string name="homefragment">TIDER FOR IDAG</string>
+    <string name="homefragment">TIDER FOR I DAG</string>
     
     <!-- Content Description -->
     <string name="desc_list_item_icon">Item Icon</string>
