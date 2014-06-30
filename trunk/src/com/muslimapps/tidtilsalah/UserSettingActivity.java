@@ -5,14 +5,12 @@ import java.io.IOException;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.OnSharedPreferenceChangeListener;
-import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
 import android.preference.Preference;
 import android.preference.PreferenceActivity;
 import android.preference.PreferenceManager;
-import android.widget.Toast;
 
 
 public class UserSettingActivity extends PreferenceActivity implements
@@ -47,7 +45,18 @@ OnSharedPreferenceChangeListener {
 	protected void onResume() {
 	    super.onResume();
 	    // Registers a callback to be invoked whenever a user changes a preference.
-	    getPreferenceScreen().getSharedPreferences().registerOnSharedPreferenceChangeListener(this);	    
+	    getPreferenceScreen().getSharedPreferences().registerOnSharedPreferenceChangeListener(this);
+	    
+	    if(playtone != null)
+		{        	
+			if(playtone.isPlaying())
+			{
+				playtone.stop();
+				playtone.reset();
+			}
+			playtone.stop();
+			playtone.reset();			
+		}
 	}
 
 	@Override
