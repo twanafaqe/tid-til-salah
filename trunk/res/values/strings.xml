@@ -11,7 +11,10 @@
     <string name="Versionnumber">Version 1.0</string>
     <string name="Gmail">Gmail</string>
     <string name="emailAddress">tidtilsalah@gmail.com</string>
-    <string name="emailSubject">Tid til Salah</string>    
+    <string name="emailSubject">Tid til Salah</string>
+    <string name="otherdayfragment">TIDER FOR ANDRE DAGE</string>
+    <string name="compassfragment">QIBLA</string>
+    <string name="homefragment">TIDER FOR IDAG</string>
     
     <!-- Content Description -->
     <string name="desc_list_item_icon">Item Icon</string>
@@ -36,7 +39,7 @@
     <string name="Om">Om</string>
     
     <string name="Azkar">Azkar</string>
-    <string name="Azkar_morgen">Morgen</string>
+    <string name="Azkar_morgen">Azkar er Under Udvikling</string>
     <string name="Azkar_aften">Aften</string>
 
 </resources>

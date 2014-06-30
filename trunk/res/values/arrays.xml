@@ -30,8 +30,7 @@
         <item name="Mekka">mekka</item>
         <item name="Meshary">meshary</item>
     </string-array>
-       <string-array name="Tema">
+    <string-array name="Tema">
         <item name="Rød">Rød</item>
-    </string-array>
-	
+    </string-array>    
 </resources>

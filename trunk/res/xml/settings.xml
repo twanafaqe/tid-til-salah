@@ -80,11 +80,11 @@
 				android:defaultValue="false">
 	        </CheckBoxPreference>
 	        
-		    <CheckBoxPreference
+		    <!-- <CheckBoxPreference
 	            android:key="Aften"
 	            android:title="@string/Azkar_aften"
 				android:defaultValue="false">
-	        </CheckBoxPreference>   
+	        </CheckBoxPreference>  -->  
 		</PreferenceCategory>  
 	</PreferenceScreen>        
    

@@ -121,35 +121,38 @@ public final class R {
     public static final class string {
         /**  Settings 
          */
-        public static final int Alarm=0x7f09000c;
-        public static final int Azkar=0x7f090018;
-        public static final int Azkar_aften=0x7f09001a;
-        public static final int Azkar_morgen=0x7f090019;
+        public static final int Alarm=0x7f09000f;
+        public static final int Azkar=0x7f09001b;
+        public static final int Azkar_aften=0x7f09001d;
+        public static final int Azkar_morgen=0x7f09001c;
         public static final int Facebook=0x7f090006;
-        public static final int Generelt=0x7f09000e;
+        public static final int Generelt=0x7f090011;
         public static final int Gmail=0x7f090008;
-        public static final int Location=0x7f09000d;
-        public static final int Lyd=0x7f090013;
-        public static final int Lyd_summary=0x7f090014;
-        public static final int Notification=0x7f090010;
-        public static final int Notification_tone=0x7f090015;
-        public static final int Om=0x7f090017;
-        public static final int Påmindelse=0x7f09000f;
-        public static final int Tema=0x7f090016;
+        public static final int Location=0x7f090010;
+        public static final int Lyd=0x7f090016;
+        public static final int Lyd_summary=0x7f090017;
+        public static final int Notification=0x7f090013;
+        public static final int Notification_tone=0x7f090018;
+        public static final int Om=0x7f09001a;
+        public static final int Påmindelse=0x7f090012;
+        public static final int Tema=0x7f090019;
         public static final int Version=0x7f090005;
         public static final int Versionnumber=0x7f090007;
-        public static final int Vibration=0x7f090011;
-        public static final int Vibration_summary=0x7f090012;
+        public static final int Vibration=0x7f090014;
+        public static final int Vibration_summary=0x7f090015;
         public static final int action_settings=0x7f090001;
         public static final int app_name=0x7f090000;
+        public static final int compassfragment=0x7f09000c;
         /**  Content Description 
          */
-        public static final int desc_list_item_icon=0x7f09000b;
+        public static final int desc_list_item_icon=0x7f09000e;
         public static final int drawer_close=0x7f090004;
         public static final int drawer_open=0x7f090003;
         public static final int emailAddress=0x7f090009;
         public static final int emailSubject=0x7f09000a;
         public static final int hello_world=0x7f090002;
+        public static final int homefragment=0x7f09000d;
+        public static final int otherdayfragment=0x7f09000b;
     }
     public static final class style {
         /** 
