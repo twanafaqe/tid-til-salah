@@ -60,7 +60,8 @@
         	android:layout_height="wrap_content"
         	android:textColor="@+drawable/button_style"
         	android:text="Vælg dato..."
-    		android:background="#f26149"/>
+        	android:gravity="left"
+    		android:background="#ea5941"/>
     	
     	<Button
     	    android:id="@+id/buttonVaelgBy"
