@@ -37,6 +37,8 @@ public class OtherDayFragment extends Fragment {
 	private TextView ishaTidView;
 	public int choosenCity = 0;
 	public static Calendar pickedDate = Calendar.getInstance();
+	public static Button buttonVaelgDato;
+	public static Button buttonVaelgBy;
 	
 	public OtherDayFragment(){}
 	
@@ -54,21 +56,27 @@ public class OtherDayFragment extends Fragment {
 		    }
 		});
         
-		Button buttonVaelgDato = (Button) rootView.findViewById(R.id.buttonVaelgDato);
+		buttonVaelgDato = (Button) rootView.findViewById(R.id.buttonVaelgDato);
 		buttonVaelgDato.setOnClickListener(new View.OnClickListener() {
 		    public void onClick(View v) {
 		    	DialogFragment datePickerFragment = new DatePickerFragment();
 		    	datePickerFragment.show(getFragmentManager(), "missiles");
 		    }
 		});
+		buttonVaelgDato.setText("Dato: " + pickedDate.get(Calendar.DATE) + "/" + pickedDate.get(Calendar.MONTH) + "-" + pickedDate.get(Calendar.YEAR));
 		
-		Button buttonVaelgBy = (Button) rootView.findViewById(R.id.buttonVaelgBy);
+		buttonVaelgBy = (Button) rootView.findViewById(R.id.buttonVaelgBy);
 		buttonVaelgBy.setOnClickListener(new View.OnClickListener() {
 		    public void onClick(View v) {
 		    	CityDialogFragment newFragment = new CityDialogFragment();
 		        newFragment.show(getFragmentManager(), "missiles");
 		    }
 		});
+		
+		Resources res = getResources();
+		String[] location = res.getStringArray(R.array.Location);
+		buttonVaelgBy.setText("By: " + location[choosenCity]);
+		
  
          
 //        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(
@@ -137,9 +145,10 @@ public class OtherDayFragment extends Fragment {
 			pickedDate.set(Calendar.YEAR, year);
 			pickedDate.set(Calendar.MONTH, month);
 			pickedDate.set(Calendar.DAY_OF_MONTH, day);
+			buttonVaelgDato.setText("Dato: " + pickedDate.get(Calendar.DATE) + "/" + pickedDate.get(Calendar.MONTH) + "-" + pickedDate.get(Calendar.YEAR));
 		}
 	}
-	
+	                                                                   
 	public class CityDialogFragment extends DialogFragment {
 		@Override
 		public Dialog onCreateDialog(Bundle savedInstanceState) {
@@ -147,7 +156,10 @@ public class OtherDayFragment extends Fragment {
 		    builder.setTitle("Vælg by")
 		           .setItems(R.array.Location, new DialogInterface.OnClickListener() {
 		               public void onClick(DialogInterface dialog, int which) {
-		            	   choosenCity = which;
+		            	    choosenCity = which;
+							Resources res = getResources();
+							String[] location = res.getStringArray(R.array.Location);
+							buttonVaelgBy.setText("By: " + location[choosenCity]);
 		           }
 		    });
 		    return builder.create();

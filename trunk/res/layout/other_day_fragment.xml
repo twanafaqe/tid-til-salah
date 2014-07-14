@@ -51,33 +51,46 @@
 	    android:layout_height="fill_parent"
 	    android:orientation="vertical"
 	    android:gravity="center"
+	    android:layout_marginTop="25dp"
 	    android:layout_marginLeft="75dp"
 	    android:layout_marginRight="75dp">
 	    
     	<Button
     	    android:id="@+id/buttonVaelgDato"
     	    android:layout_width="match_parent"
-        	android:layout_height="wrap_content"
-        	android:textColor="@+drawable/button_style"
+        	android:layout_height="35dp"
+        	android:textColor="@+drawable/button_text_style"
         	android:text="Vælg dato..."
-        	android:gravity="left"
-    		android:background="#ea5941"/>
+        	android:paddingLeft="5dp"
+        	android:gravity="center_vertical|left"
+    		android:background="@+drawable/button_style"
+    		android:layout_marginBottom="10dp"
+    		android:fontFamily="sans-serif-condensed"/>
     	
     	<Button
     	    android:id="@+id/buttonVaelgBy"
     	    android:layout_width="match_parent"
-        	android:layout_height="wrap_content"
-        	android:textColor="@+drawable/button_style"
+        	android:layout_height="35dp"
+        	android:textColor="@+drawable/button_text_style"
         	android:text="Vælg by..."
-    		android:background="#f26149"/>
+        	android:paddingLeft="5dp"
+        	android:gravity="center_vertical|left"
+    		android:background="@+drawable/button_style"
+    		android:layout_marginBottom="10dp"
+    		android:fontFamily="sans-serif-condensed"/>
 		    
     	<Button
     	    android:id="@+id/searchButton"
     	    android:layout_width="match_parent"
-        	android:layout_height="wrap_content"
-        	android:textColor="@+drawable/button_style"
+        	android:layout_height="35dp"
+        	android:textColor="@+drawable/button_text_style"
         	android:text="Søg"
-    		android:background="#f26149"/>
+        	android:paddingLeft="5dp"
+        	android:gravity="center"
+    		android:background="@+drawable/button_style"
+    		android:layout_marginBottom="10dp"
+    		android:fontFamily="sans-serif-condensed"/>
+    	
 			    <LinearLayout
 			        android:layout_width="match_parent"
 			        android:layout_height="30dp"

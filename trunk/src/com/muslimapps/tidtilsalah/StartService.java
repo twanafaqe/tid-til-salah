@@ -11,6 +11,7 @@ import android.content.SharedPreferences;
 import android.os.Binder;
 import android.os.IBinder;
 import android.preference.PreferenceManager;
+import android.widget.Toast;
 
 import com.muslimapps.tidtilsalah.logic.Alarm;
 import com.muslimapps.tidtilsalah.logic.SalahTider;
@@ -34,6 +35,7 @@ public class StartService extends Service {
 	
     @Override
     public void onCreate() {
+    	Toast.makeText(getApplication(), "created", Toast.LENGTH_LONG).show();
     	PreferenceManager.setDefaultValues(this, R.xml.settings, false);
 		SharedPreferences sharedPrefs = PreferenceManager
 				.getDefaultSharedPreferences(this);
@@ -115,6 +117,7 @@ public class StartService extends Service {
 	
 	@Override
 	public void onDestroy() {
+		Toast.makeText(getApplication(), "destroyed", Toast.LENGTH_LONG).show();
 	    // Make sure our notification is gone.
 		//Toast.makeText(getApplicationContext(), "Tid til Salah service destoryed", Toast.LENGTH_LONG).show();
 	}

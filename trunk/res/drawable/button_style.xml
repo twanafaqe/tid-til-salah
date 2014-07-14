@@ -1,14 +1,4 @@
  <selector xmlns:android="http://schemas.android.com/apk/res/android">
-   <item android:state_focused="true" android:color="#ffffff"/>
-   <item android:state_pressed="true" android:color="#eed85b" />
-   <item android:state_enabled="false" android:color="#ffffff" />
-   <item android:color="#ffffff">
-    <shape>
-		<solid
-		    android:color="#1E669B" />
-		<stroke
-		    android:width="2dp"
-		    android:color="#1B5E91" />
-	</shape>
-   </item>
+   <item android:state_pressed="true" android:drawable="@drawable/default_button_pressed"/>
+   <item android:drawable="@drawable/default_button"/>
  </selector>
