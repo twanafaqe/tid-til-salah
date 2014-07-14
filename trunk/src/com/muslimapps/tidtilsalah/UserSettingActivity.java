@@ -37,7 +37,8 @@ OnSharedPreferenceChangeListener {
 			                    return true;
 			                }
 			            });
-		
+		Preference tidligNotification = (Preference)findPreference("Notificationtone");
+		tidligNotification.setEnabled(false);
 	}
 	
 	

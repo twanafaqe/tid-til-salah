@@ -95,6 +95,7 @@ public class Alarm extends BroadcastReceiver {
 			}    	
     	}
     	if (nextSalah != null && nextAlarmCalendar != null) {
+    		
     		salahTider.setNextSalah(nextSalah);
     		
     		if(sharedPrefs.getBoolean("Notification_checkbox", true))

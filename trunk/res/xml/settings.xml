@@ -32,14 +32,18 @@
             android:title="@string/Notification">
         </CheckBoxPreference>
 
-        <ListPreference
+        <!-- <ListPreference
             android:key="tidligNotifikation"
             android:entries="@array/tidligNotifikation"
             android:summary="%s" 
             android:entryValues="@array/min"
             android:title="@string/Alarm"
             android:dependency="Notification_checkbox" 
-            android:defaultValue="0"/>
+            android:defaultValue="0"/> -->
+            
+        <Preference android:title="@string/Alarm"
+      	    android:summary="Til Tiden"
+      	    android:key="Notificationtone"/>
         
         <CheckBoxPreference
             android:key="Vibration"
@@ -47,9 +51,8 @@
             android:summary="@string/Vibration_summary"
             android:dependency="Notification_checkbox"
 			android:defaultValue="true">
-        </CheckBoxPreference>
-
-            
+        </CheckBoxPreference>      	
+        
         <ListPreference
 	       android:key="Notificationtone"
 	       android:entries="@array/Notificationtone"
@@ -58,7 +61,7 @@
 	       android:title="@string/Notification_tone"
 	       android:dependency="Notification_checkbox" 
 	       android:defaultValue="lydløs">     
-        </ListPreference>      
+        </ListPreference>  
         
 <!--         <SeekBarPreference
 			   android:defaultValue="22"
