@@ -23,8 +23,8 @@
     </PreferenceCategory>
 
   <PreferenceCategory android:title="@string/Påmindelse" >         
-   <PreferenceScreen  android:key="Notification" android:title="@string/Notification">           
-    <PreferenceCategory android:title="@string/Påmindelse" >
+   <!-- <PreferenceScreen  android:key="Notification" android:title="@string/Notification">           
+    <PreferenceCategory android:title="@string/Påmindelse" > -->
 
         <CheckBoxPreference
             android:defaultValue="true"
@@ -68,10 +68,10 @@
 			   >
   		 </SeekBarPreference> -->
         
-    	</PreferenceCategory>
-      </PreferenceScreen> 
+    	<!-- </PreferenceCategory>
+      </PreferenceScreen>  -->
 
-	<PreferenceScreen  android:key="Azkar_påmindelse" android:title="@string/Azkar">  
+	<!-- <PreferenceScreen  android:key="Azkar_påmindelse" android:title="@string/Azkar">  
 		<PreferenceCategory android:title="@string/Azkar" >    
 		    
 		    <CheckBoxPreference
@@ -80,13 +80,13 @@
 				android:defaultValue="false">
 	        </CheckBoxPreference>
 	        
-		    <!-- <CheckBoxPreference
+		    <CheckBoxPreference
 	            android:key="Aften"
 	            android:title="@string/Azkar_aften"
 				android:defaultValue="false">
-	        </CheckBoxPreference>  -->  
+	        </CheckBoxPreference>   
 		</PreferenceCategory>  
-	</PreferenceScreen>        
+	</PreferenceScreen>         -->
    
  	</PreferenceCategory>
  	

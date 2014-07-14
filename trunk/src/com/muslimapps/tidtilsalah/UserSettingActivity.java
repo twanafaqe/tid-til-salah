@@ -46,17 +46,6 @@ OnSharedPreferenceChangeListener {
 	    super.onResume();
 	    // Registers a callback to be invoked whenever a user changes a preference.
 	    getPreferenceScreen().getSharedPreferences().registerOnSharedPreferenceChangeListener(this);
-	    
-	    if(playtone != null)
-		{        	
-			if(playtone.isPlaying())
-			{
-				playtone.stop();
-				playtone.reset();
-			}
-			playtone.stop();
-			playtone.reset();			
-		}
 	}
 
 	@Override
@@ -66,17 +55,6 @@ OnSharedPreferenceChangeListener {
         // It's best practice to unregister listeners when your app isn't using them to cut down on
         // unnecessary system overhead. You do this in onPause().
         getPreferenceScreen().getSharedPreferences().registerOnSharedPreferenceChangeListener(this);
-        
-        if(playtone != null)
-		{        	
-			if(playtone.isPlaying())
-			{
-				playtone.stop();
-				playtone.reset();
-			}
-			playtone.stop();
-			playtone.reset();			
-		}
     }
 	
 	protected void onDestroy() {
