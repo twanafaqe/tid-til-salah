@@ -1,12 +1,10 @@
 <resources>
 <string-array name="tidligNotifikation">
-        <item name="tilTiden">Til tiden</item>
-        <item name="fem">5 min</item>
-        <item name="ti">10 min</item>
-        <item name="femten">15 min</item>
+        <item name="fem">5 min før</item>
+        <item name="ti">10 min før</item>
+        <item name="femten">15 min før</item>
     </string-array>
 	<string-array name="min">
-        <item name="0">0</item>
         <item name="5">5</item>
         <item name="10">10</item>
         <item name="15">15</item>
