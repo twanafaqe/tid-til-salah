@@ -115,9 +115,10 @@ public final class R {
         public static final int main=0x7f0b0000;
     }
     public static final class raw {
-        public static final int ding=0x7f050000;
-        public static final int mekka=0x7f050001;
-        public static final int meshary=0x7f050002;
+        public static final int alaqsa=0x7f050000;
+        public static final int ding=0x7f050001;
+        public static final int mekka=0x7f050002;
+        public static final int meshary=0x7f050003;
     }
     public static final class string {
         /**  Settings 

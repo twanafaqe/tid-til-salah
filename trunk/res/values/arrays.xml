@@ -23,12 +23,16 @@
         <item name="default">Ding</item>
         <item name="Mekka">Mekka</item>
         <item name="Meshary">Meshary</item>
+        <item name="Alaqsa">Alaqsa</item>
+        <item name="Egypt">Egypt</item>
     </string-array>
     <string-array name="Notification_tone">
         <item name="Ingen_Lyd">lydløs</item>
         <item name="default">ding</item>
         <item name="Mekka">mekka</item>
         <item name="Meshary">meshary</item>
+        <item name="Alaqsa">alaqsa</item>
+        <item name="Egypt">egypt</item>
     </string-array>
     <string-array name="Tema">
         <item name="Rød">Rød</item>
