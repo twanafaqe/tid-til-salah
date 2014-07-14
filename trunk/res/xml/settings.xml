@@ -42,7 +42,7 @@
             android:defaultValue="0"/> -->
             
         <Preference android:title="@string/Alarm"
-      	    android:summary="Til Tiden"
+      	    android:summary="Til tiden"
       	    android:key="Notificationtone"/>
         
         <CheckBoxPreference
@@ -90,17 +90,15 @@
 	        </CheckBoxPreference>   
 		</PreferenceCategory>  
 	</PreferenceScreen>         -->
-   
  	</PreferenceCategory>
- 	
-  	<PreferenceCategory android:title="@string/Om" >
+ 
+  <PreferenceCategory android:title="@string/Om">
       	<Preference android:title="@string/Om"
       	    android:summary="Versionsnummer"
-      	    android:key="OmButton"/>
-  
- 		       
- 	 </PreferenceCategory>
- 	
+      	    android:key="OmButton">
+      	    
+      	</Preference>
+     </PreferenceCategory>
 </PreferenceScreen>
 
      
