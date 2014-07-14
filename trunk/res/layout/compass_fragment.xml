@@ -28,7 +28,7 @@
         android:layout_marginLeft="12dp"
         android:layout_alignParentLeft="true"
         android:textColor="#ffffff"
-        android:textSize="23sp"
+        android:textSize="23dp"
         android:fontFamily="sans-serif-condensed"/>
     
      <TextView
@@ -40,7 +40,7 @@
         android:layout_marginLeft="5dp"
         android:layout_toRightOf="@+id/tabText1"
         android:textColor="#ffffff"
-        android:textSize="15sp"
+        android:textSize="15dp"
         android:fontFamily="sans-serif-condensed"/>
     
 	<LinearLayout

@@ -29,7 +29,7 @@
         android:layout_marginLeft="12dp"
         android:layout_alignParentLeft="true"
         android:textColor="#ffffff"
-        android:textSize="23sp"
+        android:textSize="23dp"
         android:fontFamily="sans-serif-condensed"/>
     
      <TextView
@@ -41,7 +41,7 @@
         android:layout_marginLeft="5dp"
         android:layout_toRightOf="@+id/tabText1"
         android:textColor="#ffffff"
-        android:textSize="15sp"
+        android:textSize="15dp"
         android:fontFamily="sans-serif-condensed"/>
 <!--    
     <TextView
@@ -53,7 +53,7 @@
         android:layout_marginLeft="10dp"
 		android:layout_toRightOf="@+id/tapMenuSalahTider"
         android:textColor="#ffffff"
-        android:textSize="15sp"
+        android:textSize="15dp"
         android:fontFamily="sans-serif-light"/>
     
     <TextView
@@ -65,7 +65,7 @@
         android:layout_marginLeft="10dp"
 		android:layout_toLeftOf="@+id/tapMenuSalahTider"
         android:textColor="#ffffff"
-        android:textSize="15sp"
+        android:textSize="15dp"
         android:fontFamily="sans-serif-light"/>
      -->
 <LinearLayout
@@ -90,7 +90,7 @@
             android:layout_height="wrap_content"
             android:text="Næste salah om"
             android:textColor="#ffffff"
-            android:textSize="30sp"
+            android:textSize="30dp"
             android:fontFamily="sans-serif-light"/>
         
     </LinearLayout>
@@ -107,7 +107,7 @@
             android:layout_height="wrap_content"
             android:text="12t, 23min, 34sek"
             android:textColor="#ffffff"
-            android:textSize="40sp"
+            android:textSize="40dp"
             android:fontFamily="sans-serif-condensed"/>
         
     </LinearLayout>
@@ -150,7 +150,7 @@
 			            android:layout_height="wrap_content"
 			            android:text="Fajr"
 			            android:textColor="#ffffff"
-			            android:textSize="20sp"
+			            android:textSize="20dp"
 			            android:layout_marginLeft="75dp"
 						android:fontFamily="sans-serif-light"/>
 			
@@ -159,7 +159,7 @@
 				        android:layout_width="fill_parent"
 				        android:layout_height="wrap_content"
 				        android:gravity="right"
-				        android:textSize="35sp" 
+				        android:textSize="35dp" 
 				        android:text="12:00"
 				        android:textStyle="bold"
 				        android:textColor="#ffffff"
@@ -180,7 +180,7 @@
 		            android:gravity="right"
 		            android:text="Shuruq"
 		            android:textColor="#ffffff"
-		            android:textSize="20sp"
+		            android:textSize="20dp"
 		            android:layout_marginLeft="75dp"
 		            android:fontFamily="sans-serif-light"/>
 		
@@ -189,7 +189,7 @@
 			        android:layout_width="fill_parent"
 			        android:layout_height="wrap_content"
 			        android:gravity="right"
-			        android:textSize="35sp" 
+			        android:textSize="35dp" 
 			        android:text="12:00"
 			        android:textStyle="bold"
 			        android:textColor="#ffffff"
@@ -217,7 +217,7 @@
 			            android:gravity="right"
 			            android:text="Duhur"
 			            android:textColor="#ffffff"
-			            android:textSize="20sp"
+			            android:textSize="20dp"
 						android:layout_marginLeft="75dp"
 						android:fontFamily="sans-serif-light"/>
 			
@@ -228,7 +228,7 @@
 			            android:gravity="right"
 			            android:text="12:00"
 			            android:textColor="#ffffff"
-			            android:textSize="35sp"
+			            android:textSize="35dp"
 			            android:textStyle="bold"
 			            android:layout_marginRight="75dp"
 			            android:fontFamily="sans-serif-condensed"/>
@@ -247,7 +247,7 @@
 		            android:layout_height="wrap_content"
 		            android:text="Asr"
 		            android:textColor="#ffffff"
-		            android:textSize="20sp"
+		            android:textSize="20dp"
 		            android:layout_marginLeft="75dp"
 		            android:fontFamily="sans-serif-light"/>/>
 		
@@ -256,7 +256,7 @@
 			        android:layout_width="fill_parent"
 			        android:layout_height="wrap_content"
 			        android:gravity="right"
-			        android:textSize="35sp" 
+			        android:textSize="35dp" 
 			        android:text="12:00"
 			        android:textStyle="bold"
 			        android:textColor="#ffffff"
@@ -283,7 +283,7 @@
 			            android:layout_height="wrap_content"
 			            android:text="Maghrib"
 			            android:textColor="#ffffff"
-			            android:textSize="20sp"
+			            android:textSize="20dp"
 			            android:layout_marginLeft="75dp"
 			            android:fontFamily="sans-serif-light"/>
 			
@@ -292,7 +292,7 @@
 				        android:layout_width="fill_parent"
 				        android:layout_height="wrap_content"
 				        android:gravity="right"
-				        android:textSize="35sp" 
+				        android:textSize="35dp" 
 				        android:text="12:00"
 				        android:textStyle="bold"
 				        android:textColor="#ffffff"
@@ -312,7 +312,7 @@
 		            android:layout_height="wrap_content"
 		            android:text="Isha"
 		            android:textColor="#ffffff"
-		            android:textSize="20sp"
+		            android:textSize="20dp"
 		            android:layout_marginLeft="75dp"
 		            android:fontFamily="sans-serif-light"/>
 		
@@ -321,7 +321,7 @@
 			        android:layout_width="fill_parent"
 			        android:layout_height="wrap_content"
 			        android:gravity="right"
-			        android:textSize="35sp" 
+			        android:textSize="35dp" 
 			        android:text="12:00"
 			        android:textStyle="bold"
 			        android:textColor="#ffffff"
@@ -344,7 +344,7 @@
 		            android:fontFamily="sans-serif-light"
 		            android:text="Lokation  "
 		            android:textColor="#f29b8d"
-		            android:textSize="15sp" />
+		            android:textSize="15dp" />
 		
 		        <TextView
 		            android:id="@+id/locationView"
@@ -353,7 +353,7 @@
 		            android:fontFamily="sans-serif-condensed"
 		            android:text=" Aarhus"
 		            android:textColor="#fcb9ae"
-		            android:textSize="15sp"
+		            android:textSize="15dp"
 		            android:textStyle="bold" />
 
 		    </LinearLayout>

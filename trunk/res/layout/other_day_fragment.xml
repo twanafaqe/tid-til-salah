@@ -29,7 +29,7 @@
         android:layout_marginLeft="12dp"
         android:layout_alignParentLeft="true"
         android:textColor="#ffffff"
-        android:textSize="23sp"
+        android:textSize="23dp"
         android:fontFamily="sans-serif-condensed"/>
     
      <TextView
@@ -41,7 +41,7 @@
         android:layout_marginLeft="5dp"
         android:layout_toRightOf="@+id/tabText1"
         android:textColor="#ffffff"
-        android:textSize="15sp"
+        android:textSize="15dp"
         android:fontFamily="sans-serif-condensed"/>
     
     
@@ -106,7 +106,7 @@
 			            android:layout_height="wrap_content"
 			            android:text="Fajr"
 			            android:textColor="#ffffff"
-			            android:textSize="20sp"
+			            android:textSize="20dp"
 			            android:layout_marginLeft="0dp"
 						android:fontFamily="sans-serif-light"/>
 			
@@ -115,7 +115,7 @@
 				        android:layout_width="fill_parent"
 				        android:layout_height="wrap_content"
 				        android:gravity="right"
-				        android:textSize="20sp" 
+				        android:textSize="20dp" 
 				        android:text="--:--"
 				        android:textStyle="bold"
 				        android:textColor="#ffffff"
@@ -135,7 +135,7 @@
 		            android:gravity="right"
 		            android:text="Shuruq"
 		            android:textColor="#ffffff"
-		            android:textSize="20sp"
+		            android:textSize="20dp"
 		            android:layout_marginLeft="0dp"
 		            android:fontFamily="sans-serif-light"/>
 		
@@ -144,7 +144,7 @@
 			        android:layout_width="fill_parent"
 			        android:layout_height="wrap_content"
 			        android:gravity="right"
-			        android:textSize="20sp" 
+			        android:textSize="20dp" 
 			        android:text="--:--"
 			        android:textStyle="bold"
 			        android:textColor="#ffffff"
@@ -166,7 +166,7 @@
 			            android:gravity="right"
 			            android:text="Duhur"
 			            android:textColor="#ffffff"
-			            android:textSize="20sp"
+			            android:textSize="20dp"
 						android:layout_marginLeft="0dp"
 						android:fontFamily="sans-serif-light"/>
 			
@@ -177,7 +177,7 @@
 			            android:gravity="right"
 			            android:text="--:--"
 			            android:textColor="#ffffff"
-			            android:textSize="20sp"
+			            android:textSize="20dp"
 			            android:textStyle="bold"
 			            android:layout_marginRight="0dp"
 			            android:fontFamily="sans-serif-condensed"/>
@@ -195,7 +195,7 @@
 		            android:layout_height="wrap_content"
 		            android:text="Asr"
 		            android:textColor="#ffffff"
-		            android:textSize="20sp"
+		            android:textSize="20dp"
 		            android:layout_marginLeft="0dp"
 		            android:fontFamily="sans-serif-light"/>/>
 		
@@ -204,7 +204,7 @@
 			        android:layout_width="fill_parent"
 			        android:layout_height="wrap_content"
 			        android:gravity="right"
-			        android:textSize="20sp" 
+			        android:textSize="20dp" 
 			        android:text="--:--"
 			        android:textStyle="bold"
 			        android:textColor="#ffffff"
@@ -223,7 +223,7 @@
 			            android:layout_height="wrap_content"
 			            android:text="Maghrib"
 			            android:textColor="#ffffff"
-			            android:textSize="20sp"
+			            android:textSize="20dp"
 			            android:layout_marginLeft="0dp"
 			            android:fontFamily="sans-serif-light"/>
 			
@@ -232,7 +232,7 @@
 				        android:layout_width="fill_parent"
 				        android:layout_height="wrap_content"
 				        android:gravity="right"
-				        android:textSize="20sp" 
+				        android:textSize="20dp" 
 				        android:text="--:--"
 				        android:textStyle="bold"
 				        android:textColor="#ffffff"
@@ -251,7 +251,7 @@
 		            android:layout_height="wrap_content"
 		            android:text="Isha"
 		            android:textColor="#ffffff"
-		            android:textSize="20sp"
+		            android:textSize="20dp"
 		            android:layout_marginLeft="0dp"
 		            android:fontFamily="sans-serif-light"/>
 		
@@ -260,7 +260,7 @@
 			        android:layout_width="fill_parent"
 			        android:layout_height="wrap_content"
 			        android:gravity="right"
-			        android:textSize="20sp" 
+			        android:textSize="20dp" 
 			        android:text="--:--"
 			        android:textStyle="bold"
 			        android:textColor="#ffffff"
