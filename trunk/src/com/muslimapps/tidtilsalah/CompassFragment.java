@@ -2,6 +2,13 @@ package com.muslimapps.tidtilsalah;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.BlurMaskFilter;
+import android.graphics.BlurMaskFilter.Blur;
+import android.graphics.Canvas;
+import android.graphics.Color;
+import android.graphics.Paint;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
@@ -48,6 +55,43 @@ public class CompassFragment extends Fragment implements SensorEventListener {
 				startActivityForResult(i, 1);
 		    }
 		});
+		
+		
+        int margin = 24;
+        int halfMargin = margin / 2;
+
+        // the glow radius
+        int glowRadius = 40;
+
+        // the glow color
+        int glowColor = Color.rgb(238, 216, 91);
+
+        // The original image to use
+        Bitmap src = BitmapFactory.decodeResource(getResources(),
+                R.drawable.img_kaaba);
+
+        // extract the alpha from the source image
+        Bitmap alpha = src.extractAlpha();
+
+        // The output bitmap (with the icon + glow)
+        Bitmap bmp = Bitmap.createBitmap(src.getWidth() + margin,
+                src.getHeight() + margin, Bitmap.Config.ARGB_8888);
+
+        // The canvas to paint on the image
+        Canvas canvas = new Canvas(bmp);
+
+        Paint paint = new Paint();
+        paint.setColor(glowColor);
+
+        // outer glow
+        paint.setMaskFilter(new BlurMaskFilter(glowRadius, Blur.OUTER));
+        canvas.drawBitmap(alpha, halfMargin, halfMargin, paint);
+
+        // original icon
+        canvas.drawBitmap(src, halfMargin, halfMargin, null);
+
+        ((ImageView) rootView.findViewById(R.id.imageViewKaaba)).setImageBitmap(bmp);
+		
         
         return rootView;
    }
@@ -88,6 +132,15 @@ public class CompassFragment extends Fragment implements SensorEventListener {
 
 		// get the angle around the z-axis rotated
 		float degree = Math.round(event.values[0]) - SalahTider.getInstance().getMeccaDirection();
+		
+		if (degree < 10)
+		{
+			glowEffect(100-(int)degree*10);
+		}
+		else
+		{
+			glowEffect(0);
+		}
 
 		// create a rotation animation (reverse turn degree degrees)
 		RotateAnimation ra = new RotateAnimation(
@@ -112,5 +165,41 @@ public class CompassFragment extends Fragment implements SensorEventListener {
 	@Override
 	public void onAccuracyChanged(Sensor sensor, int accuracy) {
 		// not in use
+	}
+	
+	public void glowEffect(int radius)
+	{/*
+		int margin = 24;
+		int halfMargin = margin / 2;
+		
+		// the glow color
+		int glowColor = Color.rgb(238, 216, 91);
+		
+		// The original image to use
+		Bitmap src = BitmapFactory.decodeResource(getResources(),
+		        R.drawable.img_kaaba);
+		
+		// extract the alpha from the source image
+		Bitmap alpha = src.extractAlpha();
+		
+		// The output bitmap (with the icon + glow)
+		Bitmap bmp = Bitmap.createBitmap(src.getWidth() + margin,
+		        src.getHeight() + margin, Bitmap.Config.ARGB_8888);
+		
+		// The canvas to paint on the image
+		Canvas canvas = new Canvas(bmp);
+		
+		Paint paint = new Paint();
+		paint.setColor(glowColor);
+		
+		// outer glow
+		paint.setMaskFilter(new BlurMaskFilter(radius, Blur.OUTER));
+		canvas.drawBitmap(alpha, halfMargin, halfMargin, paint);
+		
+		// original icon
+		canvas.drawBitmap(src, halfMargin, halfMargin, null);
+		
+		((ImageView) rootView.findViewById(R.id.imageViewKaaba)).setImageBitmap(bmp);
+		*/
 	}
 }

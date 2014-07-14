@@ -35,7 +35,7 @@ public class StartService extends Service {
 	
     @Override
     public void onCreate() {
-    	Toast.makeText(getApplication(), "created", Toast.LENGTH_LONG).show();
+    	//Toast.makeText(getApplication(), "created", Toast.LENGTH_LONG).show();
     	PreferenceManager.setDefaultValues(this, R.xml.settings, false);
 		SharedPreferences sharedPrefs = PreferenceManager
 				.getDefaultSharedPreferences(this);
@@ -117,7 +117,7 @@ public class StartService extends Service {
 	
 	@Override
 	public void onDestroy() {
-		Toast.makeText(getApplication(), "destroyed", Toast.LENGTH_LONG).show();
+		//Toast.makeText(getApplication(), "destroyed", Toast.LENGTH_LONG).show();
 	    // Make sure our notification is gone.
 		//Toast.makeText(getApplicationContext(), "Tid til Salah service destoryed", Toast.LENGTH_LONG).show();
 	}
