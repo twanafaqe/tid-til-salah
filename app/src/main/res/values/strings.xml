@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Tid til Salah</string>
+    <string name="action_settings">Indstillinger</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="drawer_open">Slider Menu Opened</string>
+    <string name="drawer_close">Slider Menu Closed</string>
+    <string name="Version">Version</string>
+    <string name="Facebook">Facebook</string>
+    <string name="Versionnumber">Version 1.0</string>
+    <string name="Gmail">Gmail</string>
+    <string name="emailAddress">tidtilsalah@gmail.com</string>
+    <string name="emailSubject">Tid til Salah</string>
+    <string name="otherdayfragment">ANDRE DAGE</string>
+    <string name="compassfragment">QIBLA</string>
+    <string name="homefragment">I DAG</string>
+    
+    <!-- Content Description -->
+    <string name="desc_list_item_icon">Item Icon</string>
+    
+    
+    <!-- Settings -->
+    <string name="Alarm">Tidlig notifikation</string>
+    <string name="Location">By</string>
+
+    <string name="Generelt">Generelt</string>
+    <string name="Påmindelse">Påmindelse</string>
+    <string name="Notification">Notification</string>
+    
+    <string name="Vibration">Vibration</string>
+    <string name="Vibration_summary">Set vibration til</string>
+    <string name="Lyd">Lyd</string>
+    <string name="Lyd_summary">Vælg lyd indstillinger </string>
+    <string name="Notification_tone">Lyd</string>
+
+    <string name="Tema">Tema</string>
+    
+    <string name="Om">Om</string>
+    
+    <string name="Azkar">Azkar</string>
+    <string name="Azkar_morgen">Azkar er Under Udvikling</string>
+    <string name="Azkar_aften">Aften</string>
+
+</resources>

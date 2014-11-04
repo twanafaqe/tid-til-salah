@@ -1,0 +1,46 @@
+<resources>
+<string-array name="tidligNotifikation">
+    	<item name="fem">Til tiden</item>
+        <item name="fem">5 min før</item>
+        <item name="ti">10 min før</item>
+        <item name="femten">15 min før</item>
+    </string-array>
+	<string-array name="min">
+	    <item name="0">0</item>
+        <item name="5">5</item>
+        <item name="10">10</item>
+        <item name="15">15</item>
+    </string-array>
+    <string-array name="Location">
+        <item name="Aarhus">Aarhus</item>
+        <item name="København">København</item>
+        <item name="Vejle">Vejle</item>
+        <item name="Odense">Odense</item>
+        <item name="Grenaa">Grenaa</item>
+    </string-array>
+    <string-array name="Notificationtone">
+        <item name="Ingen_Lyd">Lydløs</item>
+        <item name="default">Ding</item>
+        <item name="Mekka">Adhan Mekka</item>
+        <item name="Mishary1">Adhan Mishary v1</item>
+        <item name="Mishary2">Adhan Mishary v2</item>
+        <item name="Mishary3">Adhan Mishary v3</item>
+        <item name="Alaqsa">Adhan Alaqsa</item>
+        <item name="Nasser">Adhan Nasser Al Qatami</item>
+        <item name="Basit">Adhan Abdul Basit</item>
+    </string-array>
+    <string-array name="Notification_tone">
+        <item name="Ingen_Lyd">lydløs</item>
+        <item name="default">ding</item>
+        <item name="Mekka">mekka</item>
+        <item name="Mishary1">mishary_azan_v1</item>
+        <item name="Mishary2">mishary_azan_v2</item>
+        <item name="Mishary3">mishary_azan_v3</item>
+        <item name="Alaqsa">alaqsa</item>
+        <item name="Nasser">azan_nasser_al_qatami</item>
+        <item name="Basit">abdul_basit</item>
+    </string-array>
+    <string-array name="Tema">
+        <item name="Rød">Rød</item>
+    </string-array>    
+</resources>
