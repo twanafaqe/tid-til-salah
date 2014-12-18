@@ -139,7 +139,6 @@ public class Alarm extends BroadcastReceiver {
                 //        "Snooze", piSnooze);
     			NotificationManager notificationManager = (NotificationManager) context.getSystemService(Context.NOTIFICATION_SERVICE);
     			notificationManager.notify(0, mNotification.build()); 
-    			
     		}
 			
     		
