@@ -4,7 +4,9 @@ import android.app.ActivityManager;
 import android.appwidget.AppWidgetManager;
 import android.appwidget.AppWidgetProvider;
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.graphics.Color;
+import android.preference.PreferenceManager;
 import android.widget.RemoteViews;
 
 import com.muslimapps.tidtilsalah.logic.SalahTider;
@@ -14,7 +16,7 @@ import java.text.SimpleDateFormat;
 /**
  * Created by Bilal on 24-10-2014.
  */
-public class TidTilSalahWidgetProvider extends AppWidgetProvider {
+public class TidTilSalahInLineWidgetProvider extends AppWidgetProvider {
     @Override
     public void onUpdate(Context context, AppWidgetManager appWidgetManager, int[] appWidgetIds) {
         super.onUpdate(context, appWidgetManager, appWidgetIds);
@@ -23,7 +25,19 @@ public class TidTilSalahWidgetProvider extends AppWidgetProvider {
             SalahTider salahTider = SalahTider.getInstance();
             SimpleDateFormat ft =
                     new SimpleDateFormat("HH:mm");
-            RemoteViews views = new RemoteViews(context.getPackageName(), R.layout.tidtilsalah_widget);
+            RemoteViews views = null;
+
+            SharedPreferences sharedPrefs = PreferenceManager
+                    .getDefaultSharedPreferences(context);
+            String theme = sharedPrefs.getString("Tema", "Orange");
+            switch (theme) {
+                case "Orange": views = new RemoteViews(context.getPackageName(), R.layout.tidtilsalah_inline_widget_orange);
+                    break;
+                case "Black": views = new RemoteViews(context.getPackageName(), R.layout.tidtilsalah_inline_widget_black);
+                    break;
+                default: views = new RemoteViews(context.getPackageName(), R.layout.tidtilsalah_inline_widget_orange);
+            }
+
             String s = ft.format(salahTider.getFajrTid().getTime());
             views.setTextViewText(R.id.fajrTidView, ft.format(salahTider.getFajrTid().getTime()));
             views.setTextViewText(R.id.shuruqTidView, ft.format(salahTider.getShuruqTid().getTime()));

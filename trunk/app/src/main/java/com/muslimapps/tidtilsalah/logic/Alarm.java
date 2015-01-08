@@ -16,7 +16,7 @@ import android.preference.PreferenceManager;
 
 import com.muslimapps.tidtilsalah.MainActivity;
 import com.muslimapps.tidtilsalah.R;
-import com.muslimapps.tidtilsalah.TidTilSalahWidgetProvider;
+import com.muslimapps.tidtilsalah.TidTilSalahInLineWidgetProvider;
 
 import java.util.Calendar;
 
@@ -153,9 +153,9 @@ public class Alarm extends BroadcastReceiver {
 			alarms = (AlarmManager) context.getSystemService(Context.ALARM_SERVICE);
 			alarms.set(AlarmManager.RTC_WAKEUP, nextAlarmCalendar.getTimeInMillis(), alarmIntent);
 
-            Intent wdigetIntent = new Intent(context,TidTilSalahWidgetProvider.class);
+            Intent wdigetIntent = new Intent(context,TidTilSalahInLineWidgetProvider.class);
             wdigetIntent.setAction(AppWidgetManager.ACTION_APPWIDGET_UPDATE);
-            int[] ids = AppWidgetManager.getInstance(context).getAppWidgetIds(new ComponentName(context, TidTilSalahWidgetProvider.class));
+            int[] ids = AppWidgetManager.getInstance(context).getAppWidgetIds(new ComponentName(context, TidTilSalahInLineWidgetProvider.class));
             wdigetIntent.putExtra(AppWidgetManager.EXTRA_APPWIDGET_IDS,ids);
             context.sendBroadcast(wdigetIntent);
     	}

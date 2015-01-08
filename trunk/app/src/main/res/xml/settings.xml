@@ -17,7 +17,7 @@
             android:summary="%s" 
             android:entryValues="@array/Tema"
             android:title="@string/Tema"
-            android:defaultValue="Rød">
+            android:defaultValue="Orange">
          </ListPreference>
         
     </PreferenceCategory>

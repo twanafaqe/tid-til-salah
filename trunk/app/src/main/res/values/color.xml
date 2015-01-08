@@ -6,7 +6,10 @@
     <color name="list_divider">#272727</color>
     <color name="counter_text_bg">#626262</color>
     <color name="counter_text_color">#c5c4c4</color>
-    <color name="red_Light">#f26149</color>
-    <color name="red_Medium">#ea5941</color>
-    <color name="red_Dark">#df4e36</color>
+    <color name="orange_Light">#f26149</color>
+    <color name="orange_Medium">#ea5941</color>
+    <color name="orange_Dark">#df4e36</color>
+    <color name="black_Light">#2C2C2C</color>
+    <color name="black_Medium">#222222</color>
+    <color name="black_Dark">#1B1B1B</color>
 </resources>

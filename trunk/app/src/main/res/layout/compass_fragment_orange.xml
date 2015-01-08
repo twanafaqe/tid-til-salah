@@ -1,0 +1,66 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="0dp"
+    android:paddingRight="0dp"
+    android:background="@color/orange_Light">
+    
+    <ImageButton
+	    android:id="@+id/settingsButton"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:src="@drawable/ic_menu_icon"
+	    android:layout_gravity="right"
+	    android:layout_marginTop="10dp"
+	    android:layout_marginRight="10dp"
+ 		android:layout_alignParentRight="true"
+	    android:background="@null"/>
+    
+     <TextView
+        android:id="@+id/tabText1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="|"
+        android:layout_marginTop="9dp"
+        android:layout_marginLeft="12dp"
+        android:layout_alignParentLeft="true"
+        android:textColor="#ffffff"
+        android:textSize="23dp"
+        android:fontFamily="sans-serif-condensed"/>
+    
+     <TextView
+        android:id="@+id/tabText2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/compassfragment"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@+id/tabText1"
+        android:textColor="#ffffff"
+        android:textSize="15dp"
+        android:fontFamily="sans-serif-condensed"/>
+    
+	<LinearLayout
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+	    android:orientation="vertical"
+	    android:layout_marginTop="25dp"
+	    android:gravity="center">
+	    
+	    <ImageView
+	        android:id="@+id/imageViewKaaba"
+	        android:layout_width="70dp"
+	        android:layout_height="70dp"
+	        android:src="@drawable/img_kaaba"/>
+	
+	    <ImageView
+	        android:id="@+id/imageViewCompass"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:src="@drawable/img_compass"/>
+
+	</LinearLayout>
+</RelativeLayout>

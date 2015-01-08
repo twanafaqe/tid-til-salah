@@ -1,9 +1,6 @@
 package com.muslimapps.tidtilsalah;
 
 
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
-
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
@@ -18,6 +15,9 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 
 import com.muslimapps.tidtilsalah.logic.SalahTider;
+
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 
 public class HomeFragment extends Fragment {
 	
@@ -42,33 +42,43 @@ public class HomeFragment extends Fragment {
 
 	@Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
-            Bundle savedInstanceState) {
-        
-        	rootView = inflater.inflate(R.layout.home_fragment, container, false);
-        	
-			ImageButton settingsButton = (ImageButton) rootView.findViewById(R.id.settingsButton);
-			settingsButton.setOnClickListener(new View.OnClickListener() {
-			    public void onClick(View v) {
-					Intent i = new Intent(getActivity(), UserSettingActivity.class);
-					startActivityForResult(i, 1);
-			    }
-			});
+        Bundle savedInstanceState) {
+
+        SharedPreferences sharedPrefs = PreferenceManager
+                .getDefaultSharedPreferences(getActivity());
+        String theme = sharedPrefs.getString("Tema", "Orange");
+        switch (theme) {
+            case "Orange": rootView = inflater.inflate(R.layout.home_fragment_orange, container, false);
+                break;
+            case "Black": rootView = inflater.inflate(R.layout.home_fragment_black, container, false);
+                break;
+            default: rootView = inflater.inflate(R.layout.home_fragment_orange, container, false);
+        }
+
+
+        ImageButton settingsButton = (ImageButton) rootView.findViewById(R.id.settingsButton);
+        settingsButton.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent i = new Intent(getActivity(), UserSettingActivity.class);
+                startActivityForResult(i, 1);
+            }
+        });
 			
-	    	fajrTidView = (TextView) rootView.findViewById(R.id.fajrTidView);
-	    	shuruqTidView = (TextView) rootView.findViewById(R.id.shuruqTidView);
-	    	duhurTidView = (TextView) rootView.findViewById(R.id.duhurTidView);
-	    	asrTidView = (TextView) rootView.findViewById(R.id.asrTidView);
-	    	maghribTidView = (TextView) rootView.findViewById(R.id.maghribTidView);
-	    	ishaTidView = (TextView) rootView.findViewById(R.id.ishaTidView);
-	    	locationView = (TextView) rootView.findViewById(R.id.locationView);
-	    	
-	    	
-	    	fajrText = (TextView) rootView.findViewById(R.id.fajrText);
-	    	shuruqText = (TextView) rootView.findViewById(R.id.shuruqText);
-	    	duhurText = (TextView) rootView.findViewById(R.id.duhurText);
-	    	asrText = (TextView) rootView.findViewById(R.id.asrText);
-	    	maghribText = (TextView) rootView.findViewById(R.id.maghribText);
-	    	ishaText = (TextView) rootView.findViewById(R.id.ishaText);
+        fajrTidView = (TextView) rootView.findViewById(R.id.fajrTidView);
+        shuruqTidView = (TextView) rootView.findViewById(R.id.shuruqTidView);
+        duhurTidView = (TextView) rootView.findViewById(R.id.duhurTidView);
+        asrTidView = (TextView) rootView.findViewById(R.id.asrTidView);
+        maghribTidView = (TextView) rootView.findViewById(R.id.maghribTidView);
+        ishaTidView = (TextView) rootView.findViewById(R.id.ishaTidView);
+        locationView = (TextView) rootView.findViewById(R.id.locationView);
+
+
+        fajrText = (TextView) rootView.findViewById(R.id.fajrText);
+        shuruqText = (TextView) rootView.findViewById(R.id.shuruqText);
+        duhurText = (TextView) rootView.findViewById(R.id.duhurText);
+        asrText = (TextView) rootView.findViewById(R.id.asrText);
+        maghribText = (TextView) rootView.findViewById(R.id.maghribText);
+        ishaText = (TextView) rootView.findViewById(R.id.ishaText);
     		
 	    	
         return rootView;

@@ -32,6 +32,7 @@ public class MainActivity extends FragmentActivity  {
 		savedInstanceState = _savedInstanceState;
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
+        getActionBar().hide();
 
 		Intent intent = new Intent(this, StartService.class);
 		startService(intent);
@@ -56,9 +57,9 @@ public class MainActivity extends FragmentActivity  {
 		i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
 		startActivity(i);
 		overridePendingTransition(0,0);
-        intent = new Intent(this,TidTilSalahWidgetProvider.class);
+        intent = new Intent(this,TidTilSalahInLineWidgetProvider.class);
         intent.setAction(AppWidgetManager.ACTION_APPWIDGET_UPDATE);
-        int[] ids = AppWidgetManager.getInstance(getApplication()).getAppWidgetIds(new ComponentName(getApplication(), TidTilSalahWidgetProvider.class));
+        int[] ids = AppWidgetManager.getInstance(getApplication()).getAppWidgetIds(new ComponentName(getApplication(), TidTilSalahInLineWidgetProvider.class));
         intent.putExtra(AppWidgetManager.EXTRA_APPWIDGET_IDS,ids);
         sendBroadcast(intent);
 	}
