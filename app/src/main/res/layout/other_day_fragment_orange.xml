@@ -7,7 +7,7 @@
     android:orientation="vertical"
     android:paddingLeft="0dp"
     android:paddingRight="0dp"
-    android:background="@color/red_Light">
+    android:background="@color/orange_Light">
     
     <ImageButton
 	    android:id="@+id/settingsButton"
@@ -36,114 +36,70 @@
         android:id="@+id/tabText2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/homefragment"
+        android:text="@string/otherdayfragment"
         android:layout_marginTop="16dp"
         android:layout_marginLeft="5dp"
         android:layout_toRightOf="@+id/tabText1"
         android:textColor="#ffffff"
         android:textSize="15dp"
         android:fontFamily="sans-serif-condensed"/>
-<!--    
-    <TextView
-        android:id="@+id/tapMenuAndreDage"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Qibla"
-        android:layout_marginTop="16dp"
-        android:layout_marginLeft="10dp"
-		android:layout_toRightOf="@+id/tapMenuSalahTider"
-        android:textColor="#ffffff"
-        android:textSize="15dp"
-        android:fontFamily="sans-serif-light"/>
     
-    <TextView
-        android:id="@+id/tapMenuQibla"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Andre dage"
-        android:layout_marginTop="16dp"
-        android:layout_marginLeft="10dp"
-		android:layout_toLeftOf="@+id/tapMenuSalahTider"
-        android:textColor="#ffffff"
-        android:textSize="15dp"
-        android:fontFamily="sans-serif-light"/>
-     -->
+    
 <LinearLayout
-    android:id="@+id/body"
-    android:layout_width="match_parent"
-    android:layout_height="fill_parent"
-    android:layout_marginTop="25dp"
-    android:orientation="vertical"
-    android:gravity="center">
-    
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:orientation="horizontal"
-        android:layout_marginBottom="2dp"
-        android:layout_marginTop="0dp"
-        android:gravity="center">
-        
-        <TextView
-            android:id="@+id/countDownText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Næste salah om"
-            android:textColor="#ffffff"
-            android:textSize="30dp"
-            android:fontFamily="sans-serif-light"/>
-        
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="45dp"
-        android:orientation="horizontal"
-        android:layout_marginBottom="30dp"
-        android:gravity="center">
-        
-        <TextView
-            android:id="@+id/countDownTextView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="12t, 23min, 34sek"
-            android:textColor="#ffffff"
-            android:textSize="40dp"
-            android:fontFamily="sans-serif-condensed"/>
-        
-    </LinearLayout>
-    
-    <LinearLayout
+	    android:id="@+id/body"
 	    android:layout_width="match_parent"
-	    android:layout_height="wrap_content"
-	    android:orientation="horizontal"
-	    android:gravity="center"> 
+	    android:layout_height="fill_parent"
+	    android:orientation="vertical"
+	    android:gravity="center"
+	    android:layout_marginTop="15dp"
+	    android:layout_marginLeft="75dp"
+	    android:layout_marginRight="75dp">
 	    
-<!-- 	    <LinearLayout
-		    android:layout_width="0dp"
-		    android:layout_height="wrap_content"
-		    android:orientation="vertical"
-		    android:gravity="center"
-		    android:layout_weight=".15" />  -->
-	    
-	    <LinearLayout
-	        android:layout_width="0dp"
-	        android:layout_height="wrap_content"
-	        android:orientation="vertical"
-	        android:layout_weight=".70">
-	    
-		    <LinearLayout
-		        android:layout_width="match_parent"
-		        android:layout_height="50dp"
-		        android:orientation="vertical"
-		        android:gravity="center"
-		        android:background="@color/red_Dark">
-		       
+    	<Button
+    	    android:id="@+id/buttonVaelgDato"
+    	    android:layout_width="match_parent"
+        	android:layout_height="40dp"
+        	android:textColor="@+drawable/button_text_style"
+        	android:text="Vælg dato..."
+        	android:paddingLeft="5dp"
+        	android:gravity="center_vertical|left"
+    		android:background="@+drawable/button_style_orange"
+    		android:layout_marginBottom="10dp"
+    		android:fontFamily="sans-serif-condensed"
+    		android:textSize="15dp"/>
+
+    	<Button
+    	    android:id="@+id/buttonVaelgBy"
+    	    android:layout_width="match_parent"
+        	android:layout_height="40dp"
+        	android:textColor="@+drawable/button_text_style"
+        	android:text="Vælg by..."
+        	android:paddingLeft="5dp"
+        	android:gravity="center_vertical|left"
+    		android:background="@+drawable/button_style_orange"
+    		android:layout_marginBottom="10dp"
+    		android:fontFamily="sans-serif-condensed"
+    		android:textSize="15dp"/>
+
+    	<Button
+    	    android:id="@+id/searchButton"
+    	    android:layout_width="match_parent"
+        	android:layout_height="35dp"
+        	android:textColor="@+drawable/button_text_style"
+        	android:text="Søg"
+        	android:paddingLeft="5dp"
+        	android:gravity="center"
+    		android:background="@+drawable/button_style_orange"
+    		android:layout_marginBottom="10dp"
+    		android:fontFamily="sans-serif-condensed"/>
+    	
 			    <LinearLayout
 			        android:layout_width="match_parent"
-			        android:layout_height="47dp"
+			        android:layout_height="30dp"
 			        android:orientation="horizontal"
+			        android:layout_marginTop="20dp"
 			        android:gravity="center"
-			        android:background="@color/red_Medium">
+			        >
 			        <TextView
 			            android:id="@+id/fajrText"
 			            android:layout_width="wrap_content"
@@ -151,7 +107,7 @@
 			            android:text="Fajr"
 			            android:textColor="#ffffff"
 			            android:textSize="20dp"
-			            android:layout_marginLeft="75dp"
+			            android:layout_marginLeft="0dp"
 						android:fontFamily="sans-serif-light"/>
 			
 			        <TextView
@@ -159,17 +115,16 @@
 				        android:layout_width="fill_parent"
 				        android:layout_height="wrap_content"
 				        android:gravity="right"
-				        android:textSize="35dp" 
-				        android:text="12:00"
+				        android:textSize="20dp" 
+				        android:text="--:--"
 				        android:textStyle="bold"
 				        android:textColor="#ffffff"
-				        android:layout_marginRight="75dp"
+				        android:layout_marginRight="0dp"
 						android:fontFamily="sans-serif-condensed"/>
 			    </LinearLayout>
-		    </LinearLayout>
 		    <LinearLayout
 		        android:layout_width="match_parent"
-		        android:layout_height="47dp"
+		        android:layout_height="30dp"
 		        android:orientation="horizontal"
 		        android:gravity="center">
 		
@@ -181,7 +136,7 @@
 		            android:text="Shuruq"
 		            android:textColor="#ffffff"
 		            android:textSize="20dp"
-		            android:layout_marginLeft="75dp"
+		            android:layout_marginLeft="0dp"
 		            android:fontFamily="sans-serif-light"/>
 		
 		        <TextView
@@ -189,26 +144,20 @@
 			        android:layout_width="fill_parent"
 			        android:layout_height="wrap_content"
 			        android:gravity="right"
-			        android:textSize="35dp" 
-			        android:text="12:00"
+			        android:textSize="20dp" 
+			        android:text="--:--"
 			        android:textStyle="bold"
 			        android:textColor="#ffffff"
-			        android:layout_marginRight="75dp"
+			        android:layout_marginRight="0dp"
 			        android:fontFamily="sans-serif-condensed"/>
 		    </LinearLayout>
-		    <LinearLayout
-		        android:layout_width="match_parent"
-		        android:layout_height="50dp"
-		        android:orientation="vertical"
-		        android:gravity="center"
-		        android:background="@color/red_Dark">
 		       
 			    <LinearLayout
 			        android:layout_width="match_parent"
-			        android:layout_height="47dp"
+			        android:layout_height="30dp"
 			        android:orientation="horizontal"
 			        android:gravity="center"
-			        android:background="@color/red_Medium">
+			        >
 			
 			        <TextView
 			            android:id="@+id/duhurText"
@@ -218,7 +167,7 @@
 			            android:text="Duhur"
 			            android:textColor="#ffffff"
 			            android:textSize="20dp"
-						android:layout_marginLeft="75dp"
+						android:layout_marginLeft="0dp"
 						android:fontFamily="sans-serif-light"/>
 			
 			        <TextView
@@ -226,18 +175,17 @@
 			            android:layout_width="fill_parent"
 			            android:layout_height="wrap_content"
 			            android:gravity="right"
-			            android:text="12:00"
+			            android:text="--:--"
 			            android:textColor="#ffffff"
-			            android:textSize="35dp"
+			            android:textSize="20dp"
 			            android:textStyle="bold"
-			            android:layout_marginRight="75dp"
+			            android:layout_marginRight="0dp"
 			            android:fontFamily="sans-serif-condensed"/>
 
 			    </LinearLayout>
-			</LinearLayout>
 		    <LinearLayout
 		        android:layout_width="match_parent"
-		        android:layout_height="47dp"
+		        android:layout_height="30dp"
 		        android:orientation="horizontal"
 		        android:gravity="center">
 		
@@ -248,7 +196,7 @@
 		            android:text="Asr"
 		            android:textColor="#ffffff"
 		            android:textSize="20dp"
-		            android:layout_marginLeft="75dp"
+		            android:layout_marginLeft="0dp"
 		            android:fontFamily="sans-serif-light"/>/>
 		
 		        <TextView
@@ -256,26 +204,18 @@
 			        android:layout_width="fill_parent"
 			        android:layout_height="wrap_content"
 			        android:gravity="right"
-			        android:textSize="35dp" 
-			        android:text="12:00"
+			        android:textSize="20dp" 
+			        android:text="--:--"
 			        android:textStyle="bold"
 			        android:textColor="#ffffff"
-			        android:layout_marginRight="75dp"
+			        android:layout_marginRight="0dp"
 			        android:fontFamily="sans-serif-condensed"/>
-		    </LinearLayout>
-		    <LinearLayout
-		        android:layout_width="match_parent"
-		        android:layout_height="50dp"
-		        android:orientation="vertical"
-		        android:gravity="center"
-		        android:background="@color/red_Dark">
-		       
+		    </LinearLayout>       
 			    <LinearLayout
 			        android:layout_width="match_parent"
-			        android:layout_height="47dp"
+			        android:layout_height="30dp"
 			        android:orientation="horizontal"
-			        android:gravity="center"
-			        android:background="@color/red_Medium">
+			        android:gravity="center">
 		
 			        <TextView
 			            android:id="@+id/maghribText"
@@ -284,7 +224,7 @@
 			            android:text="Maghrib"
 			            android:textColor="#ffffff"
 			            android:textSize="20dp"
-			            android:layout_marginLeft="75dp"
+			            android:layout_marginLeft="0dp"
 			            android:fontFamily="sans-serif-light"/>
 			
 			        <TextView
@@ -292,17 +232,16 @@
 				        android:layout_width="fill_parent"
 				        android:layout_height="wrap_content"
 				        android:gravity="right"
-				        android:textSize="35dp" 
-				        android:text="12:00"
+				        android:textSize="20dp" 
+				        android:text="--:--"
 				        android:textStyle="bold"
 				        android:textColor="#ffffff"
-				        android:layout_marginRight="75dp"
+				        android:layout_marginRight="0dp"
 				        android:fontFamily="sans-serif-condensed"/>
 		    	</LinearLayout>
-		    </LinearLayout>
 		    <LinearLayout
 		        android:layout_width="match_parent"
-		        android:layout_height="47dp"
+		        android:layout_height="30dp"
 		        android:orientation="horizontal"
 		        android:gravity="center">
 		
@@ -313,7 +252,7 @@
 		            android:text="Isha"
 		            android:textColor="#ffffff"
 		            android:textSize="20dp"
-		            android:layout_marginLeft="75dp"
+		            android:layout_marginLeft="0dp"
 		            android:fontFamily="sans-serif-light"/>
 		
 		        <TextView
@@ -321,52 +260,14 @@
 			        android:layout_width="fill_parent"
 			        android:layout_height="wrap_content"
 			        android:gravity="right"
-			        android:textSize="35dp" 
-			        android:text="12:00"
+			        android:textSize="20dp" 
+			        android:text="--:--"
 			        android:textStyle="bold"
 			        android:textColor="#ffffff"
-			        android:layout_marginRight="75dp"
+			        android:layout_marginRight="0dp"
 			        android:fontFamily="sans-serif-condensed"/>
 		    </LinearLayout>
-		    
-		    <LinearLayout
-		        android:layout_width="match_parent"
-		        android:layout_height="20dp"
-		        android:orientation="horizontal"
-		        android:layout_marginBottom="2dp"
-		        android:layout_marginTop="10dp"
-		        android:gravity="center">
-		
-		        <TextView
-		            android:id="@+id/locationText"
-		            android:layout_width="wrap_content"
-		            android:layout_height="wrap_content"
-		            android:fontFamily="sans-serif-light"
-		            android:text="Lokation  "
-		            android:textColor="#f29b8d"
-		            android:textSize="15dp" />
-		
-		        <TextView
-		            android:id="@+id/locationView"
-		            android:layout_width="wrap_content"
-		            android:layout_height="wrap_content"
-		            android:fontFamily="sans-serif-condensed"
-		            android:text=" Aarhus"
-		            android:textColor="#fcb9ae"
-		            android:textSize="15dp"
-		            android:textStyle="bold" />
-
-		    </LinearLayout>
-		    </LinearLayout>
-		    
-		</LinearLayout>
-<!-- 	    <LinearLayout
-		    android:layout_width="0dp"
-		    android:layout_height="wrap_content"
-		    android:orientation="vertical"
-		    android:gravity="center"
-		    android:layout_weight=".15" />  -->
-	</LinearLayout>
-	
+</LinearLayout>
+    
 
 </RelativeLayout>

@@ -6,8 +6,10 @@ import android.app.DatePickerDialog;
 import android.app.Dialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.res.Resources;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.v4.app.DialogFragment;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -37,15 +39,25 @@ public class OtherDayFragment extends Fragment {
 	public static Calendar pickedDate = Calendar.getInstance();
 	public static Button buttonVaelgDato;
 	public static Button buttonVaelgBy;
+    public View rootView = null;
 	
 	public OtherDayFragment(){}
 	
 	@Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
             Bundle savedInstanceState) {
- 
-        View rootView = inflater.inflate(R.layout.other_day_fragment, container, false);
-        
+
+        SharedPreferences sharedPrefs = PreferenceManager
+                .getDefaultSharedPreferences(getActivity());
+        String theme = sharedPrefs.getString("Tema", "Orange");
+        switch (theme) {
+            case "Orange": rootView = inflater.inflate(R.layout.other_day_fragment_orange, container, false);
+                break;
+            case "Black": rootView = inflater.inflate(R.layout.other_day_fragment_black, container, false);
+                break;
+            default: rootView = inflater.inflate(R.layout.other_day_fragment_orange, container, false);
+        }
+
 		ImageButton settingsButton = (ImageButton) rootView.findViewById(R.id.settingsButton);
 		settingsButton.setOnClickListener(new View.OnClickListener() {
 		    public void onClick(View v) {

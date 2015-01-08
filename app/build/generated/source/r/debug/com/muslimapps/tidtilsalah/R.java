@@ -19,15 +19,18 @@ public final class R {
     public static final class attr {
     }
     public static final class color {
-        public static final int counter_text_bg=0x7f070000;
-        public static final int counter_text_color=0x7f070001;
-        public static final int list_background=0x7f070002;
-        public static final int list_background_pressed=0x7f070003;
-        public static final int list_divider=0x7f070004;
-        public static final int list_item_title=0x7f070005;
-        public static final int red_Dark=0x7f070006;
-        public static final int red_Light=0x7f070007;
-        public static final int red_Medium=0x7f070008;
+        public static final int black_Dark=0x7f070000;
+        public static final int black_Light=0x7f070001;
+        public static final int black_Medium=0x7f070002;
+        public static final int counter_text_bg=0x7f070003;
+        public static final int counter_text_color=0x7f070004;
+        public static final int list_background=0x7f070005;
+        public static final int list_background_pressed=0x7f070006;
+        public static final int list_divider=0x7f070007;
+        public static final int list_item_title=0x7f070008;
+        public static final int orange_Dark=0x7f070009;
+        public static final int orange_Light=0x7f07000a;
+        public static final int orange_Medium=0x7f07000b;
     }
     public static final class dimen {
         public static final int activity_horizontal_margin=0x7f080000;
@@ -38,35 +41,39 @@ public final class R {
         public static final int bg2=0x7f020001;
         public static final int bgx=0x7f020002;
         public static final int border=0x7f020003;
-        public static final int button_style=0x7f020004;
-        public static final int button_text_style=0x7f020005;
-        public static final int compass=0x7f020006;
-        public static final int counter_bg=0x7f020007;
-        public static final int default_button=0x7f020008;
-        public static final int default_button_pressed=0x7f020009;
-        public static final int ic_calendar=0x7f02000a;
-        public static final int ic_clock=0x7f02000b;
-        public static final int ic_compass=0x7f02000c;
-        public static final int ic_launcher=0x7f02000d;
-        public static final int ic_left=0x7f02000e;
-        public static final int ic_menu_icon=0x7f02000f;
-        public static final int ic_menu_icon_not_selected=0x7f020010;
-        public static final int ic_menu_icon_selected=0x7f020011;
-        public static final int ic_qubat_asakhra=0x7f020012;
-        public static final int ic_right=0x7f020013;
-        public static final int ic_search=0x7f020014;
-        public static final int ic_sigada_pri_orange=0x7f020015;
-        public static final int ic_snooze=0x7f020016;
-        public static final int ic_stat_salah=0x7f020017;
-        public static final int img_compass=0x7f020018;
-        public static final int img_compass_rotated=0x7f020019;
-        public static final int img_kaaba=0x7f02001a;
-        public static final int img_kaaba_glow=0x7f02001b;
-        public static final int kaaba=0x7f02001c;
-        public static final int list_item_bg_normal=0x7f02001d;
-        public static final int list_item_bg_pressed=0x7f02001e;
-        public static final int list_selector=0x7f02001f;
-        public static final int tidtilsalah_icon=0x7f020020;
+        public static final int button_style_black=0x7f020004;
+        public static final int button_style_orange=0x7f020005;
+        public static final int button_text_style=0x7f020006;
+        public static final int circle=0x7f020007;
+        public static final int compass=0x7f020008;
+        public static final int counter_bg=0x7f020009;
+        public static final int default_button_black=0x7f02000a;
+        public static final int default_button_orange=0x7f02000b;
+        public static final int default_button_pressed_black=0x7f02000c;
+        public static final int default_button_pressed_orange=0x7f02000d;
+        public static final int ic_calendar=0x7f02000e;
+        public static final int ic_clock=0x7f02000f;
+        public static final int ic_compass=0x7f020010;
+        public static final int ic_launcher=0x7f020011;
+        public static final int ic_left=0x7f020012;
+        public static final int ic_menu_icon=0x7f020013;
+        public static final int ic_menu_icon_not_selected=0x7f020014;
+        public static final int ic_menu_icon_selected=0x7f020015;
+        public static final int ic_qubat_asakhra=0x7f020016;
+        public static final int ic_right=0x7f020017;
+        public static final int ic_search=0x7f020018;
+        public static final int ic_sigada_pri_orange=0x7f020019;
+        public static final int ic_snooze=0x7f02001a;
+        public static final int ic_stat_salah=0x7f02001b;
+        public static final int img_compass=0x7f02001c;
+        public static final int img_compass_rotated=0x7f02001d;
+        public static final int img_kaaba=0x7f02001e;
+        public static final int img_kaaba_glow=0x7f02001f;
+        public static final int kaaba=0x7f020020;
+        public static final int list_item_bg_normal=0x7f020021;
+        public static final int list_item_bg_pressed=0x7f020022;
+        public static final int list_selector=0x7f020023;
+        public static final int tidtilsalah_icon=0x7f020024;
     }
     public static final class id {
         public static final int AppVersion=0x7f0c0001;
@@ -105,11 +112,16 @@ public final class R {
     public static final class layout {
         public static final int activity_info=0x7f030000;
         public static final int activity_main=0x7f030001;
-        public static final int compass_fragment=0x7f030002;
-        public static final int home_fragment=0x7f030003;
-        public static final int location_spinner_item=0x7f030004;
-        public static final int other_day_fragment=0x7f030005;
-        public static final int tidtilsalah_widget=0x7f030006;
+        public static final int compass_fragment_black=0x7f030002;
+        public static final int compass_fragment_orange=0x7f030003;
+        public static final int home_fragment_black=0x7f030004;
+        public static final int home_fragment_orange=0x7f030005;
+        public static final int location_spinner_item=0x7f030006;
+        public static final int other_day_fragment_black=0x7f030007;
+        public static final int other_day_fragment_orange=0x7f030008;
+        public static final int tidtilsalah_inline_widget_black=0x7f030009;
+        public static final int tidtilsalah_inline_widget_orange=0x7f03000a;
+        public static final int tidtilsalah_square_widget=0x7f03000b;
     }
     public static final class menu {
         public static final int main=0x7f0b0000;
@@ -172,6 +184,7 @@ public final class R {
     }
     public static final class xml {
         public static final int settings=0x7f040000;
-        public static final int tidtilsalah_appwidget_info=0x7f040001;
+        public static final int tidtilsalah_inline_widget_info=0x7f040001;
+        public static final int tidtilsalah_square_widget_info=0x7f040002;
     }
 }
