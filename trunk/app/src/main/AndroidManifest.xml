@@ -44,8 +44,8 @@
 		</receiver>
 
         <receiver
-            android:icon="@drawable/ic_sigada_pri_orange"
-            android:label="Tid til Salah"
+            android:icon="@drawable/inline_widget"
+            android:label="Tid til Salah - Inline Widget"
             android:name=".TidTilSalahInLineWidgetProvider" >
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
@@ -55,8 +55,8 @@
         </receiver>
 
         <receiver
-            android:icon="@drawable/ic_sigada_pri_orange"
-            android:label="Tid til Salah"
+            android:icon="@drawable/square_widget"
+            android:label="Tid til Salah - Square Widget"
             android:name=".TidTilSalahSquareWidgetProvider" >
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />

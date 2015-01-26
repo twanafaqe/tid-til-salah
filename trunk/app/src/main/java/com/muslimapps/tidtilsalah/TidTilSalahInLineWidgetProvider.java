@@ -2,7 +2,6 @@ package com.muslimapps.tidtilsalah;
 
 import android.app.ActivityManager;
 import android.app.PendingIntent;
-import android.app.TaskStackBuilder;
 import android.appwidget.AppWidgetManager;
 import android.appwidget.AppWidgetProvider;
 import android.content.Context;
@@ -21,7 +20,7 @@ import java.text.SimpleDateFormat;
  */
 public class TidTilSalahInLineWidgetProvider extends AppWidgetProvider {
     //test
-    public static String WIDGET_CLICK = "com.muslimapps.tidtilsalah.TIDTILSALAH_WIDGET_CLICK";
+    public static String WIDGET_CLICK = "TIDTILSALAH_WIDGET_CLICK";
 
     @Override
     public void onUpdate(Context context, AppWidgetManager appWidgetManager, int[] appWidgetIds) {
@@ -39,14 +38,14 @@ public class TidTilSalahInLineWidgetProvider extends AppWidgetProvider {
             switch (theme) {
                 case "Orange": views = new RemoteViews(context.getPackageName(), R.layout.tidtilsalah_inline_widget_orange);
                     break;
+                case "Blue": views = new RemoteViews(context.getPackageName(), R.layout.tidtilsalah_inline_widget_blue);
+                    break;
+                case "Green": views = new RemoteViews(context.getPackageName(), R.layout.tidtilsalah_inline_widget_green);
+                    break;
                 case "Black": views = new RemoteViews(context.getPackageName(), R.layout.tidtilsalah_inline_widget_black);
                     break;
                 default: views = new RemoteViews(context.getPackageName(), R.layout.tidtilsalah_inline_widget_orange);
             }
-
-            Intent intent = new Intent(WIDGET_CLICK);
-            PendingIntent pendingIntent = PendingIntent.getBroadcast(context, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT);
-            views.setOnClickPendingIntent(R.id.widget_frame_layout, pendingIntent);
 
             String s = ft.format(salahTider.getFajrTid().getTime());
             views.setTextViewText(R.id.fajrTidView, ft.format(salahTider.getFajrTid().getTime()));
@@ -102,6 +101,10 @@ public class TidTilSalahInLineWidgetProvider extends AppWidgetProvider {
                 }
             }
 
+            Intent configIntent = new Intent(context, MainActivity.class);
+            PendingIntent configPendingIntent = PendingIntent.getActivity(context, 0, configIntent, 0);
+            views.setOnClickPendingIntent(R.id.widget_linear_layout, configPendingIntent);
+
             appWidgetManager.updateAppWidget(appWidgetIds, views);
 
         } catch (Exception e) {
@@ -114,12 +117,7 @@ public class TidTilSalahInLineWidgetProvider extends AppWidgetProvider {
     public void onReceive(Context context, Intent intent) {
         super.onReceive(context, intent);
         if (intent.getAction().equals(WIDGET_CLICK)) {
-            Intent resultIntent = new Intent(context, MainActivity.class);
-            TaskStackBuilder stackBuilder = TaskStackBuilder.create(context);
-            stackBuilder.addParentStack(MainActivity.class);
-            stackBuilder.addNextIntent(resultIntent);
-            PendingIntent resultPendingIntent =
-                    stackBuilder.getPendingIntent(0, PendingIntent.FLAG_UPDATE_CURRENT);
+            // nothing ~
         }
     }
 

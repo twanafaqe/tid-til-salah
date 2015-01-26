@@ -11,7 +11,7 @@
         android:padding="4dp"
         android:orientation="horizontal"
         android:gravity="center"
-        android:background="@color/orange_Light">
+        android:background="@color/blue_Light">
 
     <LinearLayout
         android:layout_weight="1"
@@ -21,14 +21,14 @@
         android:gravity="center"
         android:layout_marginRight="2dp"
         android:padding="2dp"
-        android:background="@color/orange_Dark">
+        android:background="@color/blue_Dark">
         <LinearLayout
             android:layout_weight="1"
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:orientation="vertical"
             android:gravity="center"
-            android:background="@color/orange_Medium">
+            android:background="@color/blue_Medium">
             <TextView
                 android:id="@+id/fajrText"
                 android:layout_width="wrap_content"
@@ -60,14 +60,14 @@
             android:layout_marginRight="2dp"
             android:layout_marginLeft="2dp"
             android:padding="2dp"
-            android:background="@color/orange_Dark">
+            android:background="@color/blue_Dark">
             <LinearLayout
                 android:layout_weight="1"
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
                 android:orientation="vertical"
                 android:gravity="center"
-                android:background="@color/orange_Medium">
+                android:background="@color/blue_Medium">
                 <TextView
                     android:id="@+id/shuruqText"
                     android:layout_width="wrap_content"
@@ -99,14 +99,14 @@
         android:layout_marginRight="2dp"
         android:layout_marginLeft="2dp"
         android:padding="2dp"
-        android:background="@color/orange_Dark">
+        android:background="@color/blue_Dark">
         <LinearLayout
             android:layout_weight="1"
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:orientation="vertical"
             android:gravity="center"
-            android:background="@color/orange_Medium">
+            android:background="@color/blue_Medium">
             <TextView
                 android:id="@+id/duhurText"
                 android:layout_width="wrap_content"
@@ -138,14 +138,14 @@
         android:layout_marginRight="2dp"
         android:layout_marginLeft="2dp"
         android:padding="2dp"
-        android:background="@color/orange_Dark">
+        android:background="@color/blue_Dark">
         <LinearLayout
             android:layout_weight="1"
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:orientation="vertical"
             android:gravity="center"
-            android:background="@color/orange_Medium">
+            android:background="@color/blue_Medium">
             <TextView
                 android:id="@+id/asrText"
                 android:layout_width="wrap_content"
@@ -177,14 +177,14 @@
         android:layout_marginRight="2dp"
         android:layout_marginLeft="2dp"
         android:padding="2dp"
-        android:background="@color/orange_Dark">
+        android:background="@color/blue_Dark">
         <LinearLayout
             android:layout_weight="1"
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:orientation="vertical"
             android:gravity="center"
-            android:background="@color/orange_Medium">
+            android:background="@color/blue_Medium">
             <TextView
                 android:id="@+id/maghribText"
                 android:layout_width="wrap_content"
@@ -215,14 +215,14 @@
         android:gravity="center"
         android:layout_marginLeft="2dp"
         android:padding="2dp"
-        android:background="@color/orange_Dark">
+        android:background="@color/blue_Dark">
         <LinearLayout
             android:layout_weight="1"
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:orientation="vertical"
             android:gravity="center"
-            android:background="@color/orange_Medium">
+            android:background="@color/blue_Medium">
             <TextView
                 android:id="@+id/ishaText"
                 android:layout_width="wrap_content"

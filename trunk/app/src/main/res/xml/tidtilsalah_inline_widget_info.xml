@@ -4,7 +4,7 @@
                     android:minWidth="320dp"
                     android:minHeight="30dp"
                     android:updatePeriodMillis="3600000"
-                    android:previewImage="@drawable/ic_sigada_pri_orange"
+                    android:previewImage="@drawable/inline_widget"
                     android:initialLayout="@layout/tidtilsalah_inline_widget_orange"
                     android:widgetCategory="home_screen|keyguard">
 
