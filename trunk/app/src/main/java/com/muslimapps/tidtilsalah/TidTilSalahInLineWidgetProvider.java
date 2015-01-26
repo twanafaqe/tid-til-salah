@@ -20,7 +20,7 @@ import java.text.SimpleDateFormat;
  * Created by Bilal on 24-10-2014.
  */
 public class TidTilSalahInLineWidgetProvider extends AppWidgetProvider {
-
+    //test
     public static String WIDGET_CLICK = "com.muslimapps.tidtilsalah.TIDTILSALAH_WIDGET_CLICK";
 
     @Override
