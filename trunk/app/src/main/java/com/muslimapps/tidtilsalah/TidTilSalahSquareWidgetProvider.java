@@ -1,9 +1,12 @@
 package com.muslimapps.tidtilsalah;
 
 import android.app.ActivityManager;
+import android.app.PendingIntent;
+import android.app.TaskStackBuilder;
 import android.appwidget.AppWidgetManager;
 import android.appwidget.AppWidgetProvider;
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Color;
 import android.widget.RemoteViews;
 
@@ -15,6 +18,9 @@ import java.text.SimpleDateFormat;
  * Created by Bilal on 24-10-2014.
  */
 public class TidTilSalahSquareWidgetProvider extends AppWidgetProvider {
+
+    public static String WIDGET_CLICK = "TIDTILSALAH_WIDGET_CLICK";
+
     @Override
     public void onUpdate(Context context, AppWidgetManager appWidgetManager, int[] appWidgetIds) {
         super.onUpdate(context, appWidgetManager, appWidgetIds);
@@ -24,6 +30,11 @@ public class TidTilSalahSquareWidgetProvider extends AppWidgetProvider {
             SimpleDateFormat ft =
                     new SimpleDateFormat("HH:mm");
             RemoteViews views = new RemoteViews(context.getPackageName(), R.layout.tidtilsalah_square_widget);
+
+            Intent intent = new Intent(WIDGET_CLICK);
+            PendingIntent pendingIntent = PendingIntent.getBroadcast(context, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT);
+            views.setOnClickPendingIntent(R.id.widget_frame_layout, pendingIntent );
+
             String s = ft.format(salahTider.getFajrTid().getTime());
             views.setTextViewText(R.id.fajrTidView, ft.format(salahTider.getFajrTid().getTime()));
             views.setTextViewText(R.id.shuruqTidView, ft.format(salahTider.getShuruqTid().getTime()));
@@ -84,6 +95,19 @@ public class TidTilSalahSquareWidgetProvider extends AppWidgetProvider {
 
         }
 
+    }
+
+    @Override
+    public void onReceive(Context context, Intent intent) {
+        super.onReceive(context, intent);
+        if (intent.getAction().equals(WIDGET_CLICK)) {
+            Intent resultIntent = new Intent(context, MainActivity.class);
+            TaskStackBuilder stackBuilder = TaskStackBuilder.create(context);
+            stackBuilder.addParentStack(MainActivity.class);
+            stackBuilder.addNextIntent(resultIntent);
+            PendingIntent resultPendingIntent =
+                    stackBuilder.getPendingIntent(0, PendingIntent.FLAG_UPDATE_CURRENT);
+        }
     }
 
     private boolean isMyServiceRunning(Class<?> serviceClass,Context context) {

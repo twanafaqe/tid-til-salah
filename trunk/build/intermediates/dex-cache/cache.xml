@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<pre-dex-items>
+<items version="2" >
 
     <item
-        dex="C:\Users\Bilal\workspace\TidTilSalah\app\build\intermediates\pre-dexed\debug\support-v4-19.1.0-c0d7101b91029dae9ecb59a4cb20c9f624a44064.jar"
         jar="C:\AndroidAdtBundle\sdk\extras\android\m2repository\com\android\support\support-v4\19.1.0\support-v4-19.1.0.jar"
         jumboMode="false"
         revision="19.1.0"
-        sha1="85f201b380937e61a9dce6ca90ccf6872abbfb67"/>
+        sha1="85f201b380937e61a9dce6ca90ccf6872abbfb67">
+        <dex dex="C:\Users\Bilal\Desktop\TidTilSalah\app\build\intermediates\pre-dexed\debug\support-v4-19.1.0-c0d7101b91029dae9ecb59a4cb20c9f624a44064.jar" />
+    </item>
 
-</pre-dex-items>
+</items>
