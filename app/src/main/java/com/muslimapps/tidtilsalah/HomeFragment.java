@@ -50,6 +50,10 @@ public class HomeFragment extends Fragment {
         switch (theme) {
             case "Orange": rootView = inflater.inflate(R.layout.home_fragment_orange, container, false);
                 break;
+            case "Blue": rootView = inflater.inflate(R.layout.home_fragment_blue, container, false);
+                break;
+            case "Green": rootView = inflater.inflate(R.layout.home_fragment_green, container, false);
+                break;
             case "Black": rootView = inflater.inflate(R.layout.home_fragment_black, container, false);
                 break;
             default: rootView = inflater.inflate(R.layout.home_fragment_orange, container, false);

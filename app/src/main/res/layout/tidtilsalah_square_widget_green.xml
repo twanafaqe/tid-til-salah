@@ -4,16 +4,17 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
     <LinearLayout
+        android:id="@+id/widget_linear_layout"
         android:layout_width="fill_parent"
-        android:layout_height="180dp"
+        android:layout_height="181dp"
         android:orientation="vertical"
-        android:gravity="center">
+        android:gravity="center"
+        android:background="@color/green_Light">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:orientation="horizontal"
-            android:gravity="center">
+            android:layout_height="58dp"
+            android:orientation="horizontal">
 
         <LinearLayout
             android:layout_weight="1"
@@ -22,15 +23,16 @@
             android:orientation="vertical"
             android:gravity="center"
             android:layout_marginRight="2dp"
+            android:layout_marginLeft="4dp"
+            android:layout_marginTop="4dp"
             android:padding="2dp"
-            android:background="@color/orange_Dark">
+            android:background="@color/green_Dark">
             <LinearLayout
-                android:layout_weight="1"
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
                 android:orientation="vertical"
                 android:gravity="center"
-                android:background="@color/orange_Medium">
+                android:background="@color/green_Medium">
                 <TextView
                     android:id="@+id/fajrText"
                     android:layout_width="wrap_content"
@@ -59,17 +61,17 @@
             android:layout_height="fill_parent"
             android:orientation="vertical"
             android:gravity="center"
-            android:layout_marginRight="0dp"
+            android:layout_marginRight="4dp"
+            android:layout_marginTop="4dp"
             android:layout_marginLeft="2dp"
             android:padding="2dp"
-            android:background="@color/orange_Dark">
+            android:background="@color/green_Dark">
             <LinearLayout
-                android:layout_weight="1"
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
                 android:orientation="vertical"
                 android:gravity="center"
-                android:background="@color/orange_Medium">
+                android:background="@color/green_Medium">
                 <TextView
                     android:id="@+id/shuruqText"
                     android:layout_width="wrap_content"
@@ -96,8 +98,9 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:paddingTop="4dp"
+        android:layout_height="58dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="4dp"
         android:orientation="horizontal"
         android:gravity="center">
         <LinearLayout
@@ -107,15 +110,15 @@
             android:orientation="vertical"
             android:gravity="center"
             android:layout_marginRight="2dp"
+            android:layout_marginLeft="4dp"
             android:padding="2dp"
-            android:background="@color/orange_Dark">
+            android:background="@color/green_Dark">
             <LinearLayout
-                android:layout_weight="1"
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
                 android:orientation="vertical"
                 android:gravity="center"
-                android:background="@color/orange_Medium">
+                android:background="@color/green_Medium">
                 <TextView
                     android:id="@+id/duhurText"
                     android:layout_width="wrap_content"
@@ -144,17 +147,16 @@
             android:layout_height="fill_parent"
             android:orientation="vertical"
             android:gravity="center"
-            android:layout_marginRight="0dp"
+            android:layout_marginRight="4dp"
             android:layout_marginLeft="2dp"
             android:padding="2dp"
-            android:background="@color/orange_Dark">
+            android:background="@color/green_Dark">
             <LinearLayout
-                android:layout_weight="1"
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
                 android:orientation="vertical"
                 android:gravity="center"
-                android:background="@color/orange_Medium">
+                android:background="@color/green_Medium">
                 <TextView
                     android:id="@+id/asrText"
                     android:layout_width="wrap_content"
@@ -180,10 +182,8 @@
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:paddingTop="4dp"
-            android:orientation="horizontal"
-            android:gravity="center">
+            android:layout_height="58dp"
+            android:orientation="horizontal">
             <LinearLayout
                 android:layout_weight="1"
                 android:layout_width="wrap_content"
@@ -191,15 +191,16 @@
                 android:orientation="vertical"
                 android:gravity="center"
                 android:layout_marginRight="2dp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginBottom="4dp"
                 android:padding="2dp"
-                android:background="@color/orange_Dark">
+                android:background="@color/green_Dark">
                 <LinearLayout
-                    android:layout_weight="1"
                     android:layout_width="fill_parent"
                     android:layout_height="fill_parent"
                     android:orientation="vertical"
                     android:gravity="center"
-                    android:background="@color/orange_Medium">
+                    android:background="@color/green_Medium">
                 <TextView
                     android:id="@+id/maghribText"
                     android:layout_width="wrap_content"
@@ -228,17 +229,17 @@
                 android:layout_height="fill_parent"
                 android:orientation="vertical"
                 android:gravity="center"
-                android:layout_marginRight="0dp"
+                android:layout_marginRight="4dp"
+                android:layout_marginBottom="4dp"
                 android:layout_marginLeft="2dp"
                 android:padding="2dp"
-                android:background="@color/orange_Dark">
+                android:background="@color/green_Dark">
                 <LinearLayout
-                    android:layout_weight="1"
                     android:layout_width="fill_parent"
                     android:layout_height="fill_parent"
                     android:orientation="vertical"
                     android:gravity="center"
-                    android:background="@color/orange_Medium">
+                    android:background="@color/green_Medium">
                 <TextView
                     android:id="@+id/ishaText"
                     android:layout_width="wrap_content"
@@ -246,6 +247,8 @@
                     android:text="Isha"
                     android:textColor="#ffffff"
                     android:textSize="12dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="10dp"
                     android:fontFamily="sans-serif-light"/>
 
                 <TextView

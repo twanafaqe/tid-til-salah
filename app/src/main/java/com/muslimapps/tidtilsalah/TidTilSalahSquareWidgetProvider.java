@@ -7,7 +7,9 @@ import android.appwidget.AppWidgetManager;
 import android.appwidget.AppWidgetProvider;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Color;
+import android.preference.PreferenceManager;
 import android.widget.RemoteViews;
 
 import com.muslimapps.tidtilsalah.logic.SalahTider;
@@ -29,11 +31,23 @@ public class TidTilSalahSquareWidgetProvider extends AppWidgetProvider {
             SalahTider salahTider = SalahTider.getInstance();
             SimpleDateFormat ft =
                     new SimpleDateFormat("HH:mm");
-            RemoteViews views = new RemoteViews(context.getPackageName(), R.layout.tidtilsalah_square_widget);
 
-            Intent intent = new Intent(WIDGET_CLICK);
-            PendingIntent pendingIntent = PendingIntent.getBroadcast(context, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT);
-            views.setOnClickPendingIntent(R.id.widget_frame_layout, pendingIntent );
+            RemoteViews views = null;
+
+            SharedPreferences sharedPrefs = PreferenceManager
+                    .getDefaultSharedPreferences(context);
+            String theme = sharedPrefs.getString("Tema", "Orange");
+            switch (theme) {
+                case "Orange": views = new RemoteViews(context.getPackageName(), R.layout.tidtilsalah_square_widget_orange);
+                    break;
+                case "Blue": views = new RemoteViews(context.getPackageName(), R.layout.tidtilsalah_square_widget_blue);
+                    break;
+                case "Green": views = new RemoteViews(context.getPackageName(), R.layout.tidtilsalah_square_widget_green);
+                    break;
+                case "Black": views = new RemoteViews(context.getPackageName(), R.layout.tidtilsalah_square_widget_black);
+                    break;
+                default: views = new RemoteViews(context.getPackageName(), R.layout.tidtilsalah_square_widget_orange);
+            }
 
             String s = ft.format(salahTider.getFajrTid().getTime());
             views.setTextViewText(R.id.fajrTidView, ft.format(salahTider.getFajrTid().getTime()));
@@ -88,6 +102,10 @@ public class TidTilSalahSquareWidgetProvider extends AppWidgetProvider {
                     break;
                 }
             }
+
+            Intent configIntent = new Intent(context, MainActivity.class);
+            PendingIntent configPendingIntent = PendingIntent.getActivity(context, 0, configIntent, 0);
+            views.setOnClickPendingIntent(R.id.widget_linear_layout, configPendingIntent);
 
             appWidgetManager.updateAppWidget(appWidgetIds, views);
 
