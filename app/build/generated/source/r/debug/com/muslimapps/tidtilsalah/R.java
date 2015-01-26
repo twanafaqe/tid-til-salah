@@ -79,7 +79,7 @@ public final class R {
         public static final int AppVersion=0x7f0c0001;
         public static final int GmailButton=0x7f0c0003;
         public static final int TidTilSalahInfo=0x7f0c0000;
-        public static final int action_settings=0x7f0c001f;
+        public static final int action_settings=0x7f0c0020;
         public static final int asrText=0x7f0c0014;
         public static final int asrTidView=0x7f0c0015;
         public static final int body=0x7f0c000b;
@@ -108,6 +108,7 @@ public final class R {
         public static final int shuruqTidView=0x7f0c0011;
         public static final int tabText1=0x7f0c0007;
         public static final int tabText2=0x7f0c0008;
+        public static final int widget_frame_layout=0x7f0c001f;
     }
     public static final class layout {
         public static final int activity_info=0x7f030000;
