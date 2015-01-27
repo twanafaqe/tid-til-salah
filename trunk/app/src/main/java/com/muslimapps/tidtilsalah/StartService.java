@@ -4,6 +4,8 @@ package com.muslimapps.tidtilsalah;
 import android.app.AlarmManager;
 import android.app.PendingIntent;
 import android.app.Service;
+import android.appwidget.AppWidgetManager;
+import android.content.ComponentName;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Binder;
@@ -105,6 +107,18 @@ public class StartService extends Service {
 		PendingIntent alarmIntent = PendingIntent.getBroadcast(this, 0, activate, 0);
 		alarms = (AlarmManager) this.getSystemService(ALARM_SERVICE);
 		alarms.set(AlarmManager.RTC_WAKEUP, alarmCalendar.getTimeInMillis(), alarmIntent);
+
+        Intent intent = new Intent(this,TidTilSalahInLineWidgetProvider.class);
+        intent.setAction(AppWidgetManager.ACTION_APPWIDGET_UPDATE);
+        int[] ids = AppWidgetManager.getInstance(getApplication()).getAppWidgetIds(new ComponentName(getApplication(), TidTilSalahInLineWidgetProvider.class));
+        intent.putExtra(AppWidgetManager.EXTRA_APPWIDGET_IDS,ids);
+        sendBroadcast(intent);
+
+        intent = new Intent(this,TidTilSalahSquareWidgetProvider.class);
+        intent.setAction(AppWidgetManager.ACTION_APPWIDGET_UPDATE);
+        ids = AppWidgetManager.getInstance(getApplication()).getAppWidgetIds(new ComponentName(getApplication(), TidTilSalahSquareWidgetProvider.class));
+        intent.putExtra(AppWidgetManager.EXTRA_APPWIDGET_IDS,ids);
+        sendBroadcast(intent);
     }
 	
 	@Override
