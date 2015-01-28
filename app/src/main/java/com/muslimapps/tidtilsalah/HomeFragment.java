@@ -44,10 +44,6 @@ public class HomeFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
         Bundle savedInstanceState) {
 
-        //////////////////////////////////////////////////////////////////
-        //Shaban Test ////////////////////////////////////////////
-        ////////////////////////////    
-
         SharedPreferences sharedPrefs = PreferenceManager
                 .getDefaultSharedPreferences(getActivity());
         String theme = sharedPrefs.getString("Tema", "Orange");
