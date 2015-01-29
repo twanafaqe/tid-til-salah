@@ -19,8 +19,17 @@ public class InfoActivity extends FragmentActivity{
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
-				Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.facebook.com/TidTilSalah?ref_type=bookmark"));
-                startActivity(browserIntent);
+                //Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.facebook.com/TidTilSalah?ref_type=bookmark"));
+                //startActivity(browserIntent);
+
+                try {
+                    getApplicationContext().getPackageManager().getPackageInfo("com.facebook.katana", 0);
+                    Intent browserIntentApp = new Intent(Intent.ACTION_VIEW, Uri.parse("fb://profile/1493410164204048"));
+                    startActivity(browserIntentApp);
+                } catch (Exception e) {
+                    Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.facebook.com/TidTilSalah?ref_type=bookmark"));
+                    startActivity(browserIntent);
+                }
 			}
 		});
 		  
@@ -37,7 +46,32 @@ public class InfoActivity extends FragmentActivity{
 				startActivity(intent);
 			}
 		});
-		               
+
+        Button anbefalButton = (Button) findViewById(R.id.AnButton);
+                anbefalButton.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        String anbefalstring = getResources().getString(R.string.Anbefal);
+                        Intent sendIntent = new Intent(Intent.ACTION_VIEW);
+                        sendIntent.setType("vnd.android-dir/mms-sms");
+                        //sendIntent.setData(Uri.parse("sms:"));
+                        sendIntent.putExtra("sms_body", anbefalstring);
+                        startActivity(sendIntent);
+                    }
+                });
+
+        Button vurdereButton = (Button) findViewById(R.id.VurderButton);
+                vurdereButton.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        final String appPackageName = getPackageName(); // getPackageName() from Context or Activity object
+                        try {
+                            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=" + appPackageName)));
+                        } catch (android.content.ActivityNotFoundException anfe) {
+                            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=" + appPackageName)));
+                        }
+                    }
+                });
 
 	}
 }

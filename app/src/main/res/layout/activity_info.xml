@@ -4,48 +4,99 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:layout_gravity="center"
-    android:background="#fff">
+    android:weightSum="1"
+    android:background="#000000">
 
-    <ImageView
-        android:id="@+id/TidTilSalahInfo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginRight="10dp"
-        android:layout_marginTop="10dp"
-        android:contentDescription="@string/Version"
-        android:src="@drawable/ic_sigada_pri_orange" >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:gravity="center"        >
 
-	</ImageView>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginTop="0dp"
+            android:layout_marginLeft="75dp"
+            android:layout_marginRight="75dp">
 
-    <TextView
-        android:id="@+id/AppVersion"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="@string/Versionnumber"
-        android:textColor="#FFFFFF"
-        android:textSize="20dp"
-        android:textStyle="bold" />
+            <ImageView
+                android:id="@+id/TidTilSalahInfo"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:contentDescription="@string/Version"
+                android:src="@drawable/ic_sigada_pri_orange">
+            </ImageView>
 
-    <Button
-        android:id="@+id/facebookButton"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="5dp"
-        android:text="@string/Facebook"
-        android:textColor="#0101DF"
-        android:textSize="30dp"
-        android:textStyle="bold" />
-    
-    <Button
-        android:id="@+id/GmailButton"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="5dp"
-        android:text="@string/Gmail"
-        android:textColor="#0101DF"
-        android:textSize="30dp"
-        android:textStyle="bold" />
- 
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Tid til Salah"
+                android:gravity="center"
+                android:textSize="35dp"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/AppVersion"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/Versionnumber"
+                android:textColor="#FFFFFF"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginLeft="75dp"
+            android:layout_marginRight="75dp">
+
+            <Button
+                android:id="@+id/facebookButton"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/Facebook"
+                android:textColor="#0000FF"
+                android:textSize="25dp"
+                android:textStyle="bold"
+                android:background="#000000"/>
+
+            <Button
+                android:id="@+id/GmailButton"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/Gmail"
+                android:textColor="#FFFFFF"
+                android:textSize="25dp"
+                android:textStyle="bold"
+                android:background="#000000"/>
+
+            <Button
+                android:id="@+id/AnButton"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:text="Anbefal til en ven"
+                android:textSize="25dp"
+                android:textStyle="bold"
+                android:background="#000000"/>
+
+            <Button
+                android:id="@+id/VurderButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Vurdere Tid til Salah"
+                android:textSize="25dp"
+                android:textStyle="bold"
+                android:background="#000000"/>
+        </LinearLayout>
+
+    </LinearLayout>
 </LinearLayout>

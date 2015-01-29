@@ -8,7 +8,7 @@
     <string name="drawer_close">Slider Menu Closed</string>
     <string name="Version">Version</string>
     <string name="Facebook">Facebook</string>
-    <string name="Versionnumber">Version 1.0</string>
+    <string name="Versionnumber">Version 1.1</string>
     <string name="Gmail">Gmail</string>
     <string name="emailAddress">tidtilsalah@gmail.com</string>
     <string name="emailSubject">Tid til Salah</string>
@@ -37,9 +37,14 @@
     <string name="Tema">Tema</string>
     
     <string name="Om">Om</string>
-    
+    <string name="OmTtS">Om Tid til Salah</string>
+
     <string name="Azkar">Azkar</string>
     <string name="Azkar_morgen">Azkar er Under Udvikling</string>
     <string name="Azkar_aften">Aften</string>
+
+
+    <string name="Anbefal">Assalam 3alaikum\n\nJeg kan varmt anbefale Android applikationen Tid til Salah, som kan vise de korrekte muslimske bedetider i forhold til lokation.\nMan kan se bederetning, samt bedetider for andre dage.\n\nSe mere på nedenstående link \nhttps://play.google.com/store/apps/details?id=com.muslimapps.tidtilsalah \n\neller facebook profilen \n\nhttps://www.facebook.com/TidTilSalah</string>
+    <string name="OmText">Har du forslag eller ideer til forbedringer, har du nogle ønsker du kunne tænke dig at få opfyldt, er du velkommen til at kontakte os på enten Facebook, Play Store eller per mail</string>
 
 </resources>
