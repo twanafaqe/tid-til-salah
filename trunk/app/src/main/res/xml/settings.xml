@@ -93,10 +93,9 @@
  	</PreferenceCategory>
  
   <PreferenceCategory android:title="@string/Om">
-      	<Preference android:title="@string/Om"
-      	    android:summary="Tid til Salah 1.1"
+      	<Preference android:title="@string/OmTtS"
       	    android:key="OmButton">
-      	    
+            <!--android:summary="Tid til Salah 1.1"-->
       	</Preference>
      </PreferenceCategory>
 </PreferenceScreen>

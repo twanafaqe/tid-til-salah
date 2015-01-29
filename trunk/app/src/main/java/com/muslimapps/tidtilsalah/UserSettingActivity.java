@@ -26,7 +26,7 @@ OnSharedPreferenceChangeListener {
 		playtone = new MediaPlayer();
 		
 		Preference button = (Preference)findPreference("OmButton");
-		button.setEnabled(false);
+		button.setEnabled(true);
 		
 			button.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
 			                @Override
